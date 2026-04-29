@@ -139,7 +139,7 @@ button:hover {
 .post-cont td {
     border-bottom: 1px solid #e2e2e2;
 }
-.post-cont td:last-child {
+.post-cont tr:last-child td {
     border-bottom: 1px solid #ababab;
 }
 

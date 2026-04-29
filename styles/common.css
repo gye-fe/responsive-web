@@ -156,7 +156,7 @@ button:hover {
 .chart td {
     border-bottom: 1px solid #e2e2e2;
 }
-.chart td:last-child {
+.chart tr:last-child td {
     border-bottom: 1px solid #ababab;
 }
 

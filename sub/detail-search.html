@@ -6,16 +6,14 @@
     <title>상세검색 | 수지도서관</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="styles/sub/detail-search.css">
-    <script src="scripts/sub/서브페이지명.js" defer></script>
+    <link rel="stylesheet" href="../styles/sub/detail-search.css">
+    <script src="../scripts/sub/서브페이지명.js" defer></script>
 </head>
 <body>
-
     <div class="container">
-        <aside id="aside">
-            <div>열린마당</div>
+        <aside id="aside" class="blind-m">
+            <h1>열린마당</h1>
             <!--공간 나누기--->
-            <div>
                 <ul>
                     <li>도서관소식</li>
                     <li>보도자료</li>
@@ -46,134 +44,152 @@
                 </ul>
         </aside><!-- // #aside End -->
         <section id="main">
-            <p class="navi">
-                <span>자료검색</span>
-                <span>통합자료검색</span>
-                <span>상세검색</span>
-            </p>
-            <h1 class="tit-main">상세검색</h1>
-            
-            <h2 class="blind">상세조건을 선택하고 입력하세요.</h2>
-            <form class="base-form">
-                <legend class="blind">검색항목, 표준부호, 발행연도, 도서관, 자료실, 정렬조건, 출력건수 조건에 맞게 검색하면 결과가 나옵니다.</legend>
-                <p>검색항목</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>도서명</option>
-                            <option value="2">저자</option>
-                            <option value="3">출판사</option>
-                            <option value="4">키워드</option>
-                        </select>
-                        <input type="text" class="base-form">
-                    </li>
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>저자</option>
-                            <option value="2">서명</option>
-                            <option value="3">발행자</option>
-                            <option value="4">키워드</option>
-                        </select>
-                        <input type="text" class="base-form">
-                    </li>
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>발행자</option>
-                            <option value="2">서명</option>
-                            <option value="3">발행자</option>
-                            <option value="4">키워드</option>
-                        </select>
-                        <input type="text" class="base-form">
-                    </li>
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>키워드</option>
-                            <option value="2">서명</option>
-                            <option value="3">발행자</option>
-                        </select>
-                        <input type="text" class="base-form">
-                    </li>
-                </ul>
-                <p>표준부호</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>ISBN</option>
-                            <option value="2">ISSN</option>
-                        </select>
-                        <input type="text" class="base-form">
-                    </li>
-                </ul>
-                <p>발행연도</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <input type="text" placeholder="발행년(시작)" class="base-form">
-                        <span>~</span>
-                        <input type="text" placeholder="발행년(종료)" class="base-form">
-                    </li>
-                </ul>
-                <p>도서관</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>수지도서관</option>
-                            <option value="2">전체도서관</option>
-                            <option value="3">보정도서관</option>
-                            <option value="4">기흥도서관</option>
-                            <option value="5">구성도서관</option>
-                            <option value="6">남사도서관</option>
-                            <option value="7">동백도서관</option>
-                            <option value="8">동천도서관</option>
-                            <option value="9">모현도서관</option>
-                            <option value="10">상현도서관</option>
-                        </select>
-                    </li>
-                </ul>
-                <p>자료실</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>[수지]종합자료실</option>
-                            <option value="2">전체자료실</option>
-                            <option value="3">용인시청[민원실]</option>
-                            <option value="5">[중앙]종합자료실</option>
-                            <option value="6">[성복]종합자료1</option>
-                            <option value="7">용인중앙시장역[경전철]</option>
-                            <option value="8">성복역[신분당선]</option>
-                            <option value="9">[서농]정기간행물실</option>
-                            <option value="10">[동백]디지털자료실</option>
-                        </select>
-                    </li>
-                </ul>
-                <p>정렬조건</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>정확도순</option>
-                            <option value="2">등록일</option>
-                            <option value="3">서명</option>
-                            <option value="4">저자</option>
-                        </select>
-                    </li>
-                </ul>
-                <p>출력건수</p>
-                <ul><!--오른쪽항목-->
-                    <li>
-                        <select class="dropdown">
-                            <option value="1" selected>10</option>
-                            <option value="2">20</option>
-                            <option value="3">50</option>
-                        </select>
-                    </li>
-                </ul>
-                <!--버튼들-->
-                <P>
-                    <button type="reset" class="reset-btn">초기화</button>
-                    <button type="submit" class="search-btn">검색</button>
-                </P>
-            </form>
-            
-            
+            <div class="main-top">
+                <p class="navi">
+                    <span>자료검색</span>
+                    <span>통합자료검색</span>
+                    <span>상세검색</span>
+                </p>
+                <h1 class="tit-main">상세검색</h1>
+            </div><!--main top-->
+            <div class="main-content">
+                <h2 class="blind">상세조건을 선택하고 입력하세요.</h2>
+                <form action="" method="get">
+                    <fieldset>
+                        <div class="base-form">
+                            <legend class="blind">검색항목, 표준부호, 발행연도, 도서관, 자료실, 정렬조건, 출력건수 조건에 맞게 검색하면 결과가 나옵니다.</legend>
+                            <div class="search-key01">
+                                <p>검색항목</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>도서명</option>
+                                            <option value="2">저자</option>
+                                            <option value="3">출판사</option>
+                                            <option value="4">키워드</option>
+                                        </select>
+                                        <input type="text" class="base-form">
+                                    </li>
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>저자</option>
+                                            <option value="2">서명</option>
+                                            <option value="3">발행자</option>
+                                            <option value="4">키워드</option>
+                                        </select>
+                                        <input type="text" class="base-form">
+                                    </li>
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>발행자</option>
+                                            <option value="2">서명</option>
+                                            <option value="3">발행자</option>
+                                            <option value="4">키워드</option>
+                                        </select>
+                                        <input type="text" class="base-form">
+                                    </li>
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>키워드</option>
+                                            <option value="2">서명</option>
+                                            <option value="3">발행자</option>
+                                        </select>
+                                        <input type="text" class="base-form">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key02">
+                                <p>표준부호</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>ISBN</option>
+                                            <option value="2">ISSN</option>
+                                        </select>
+                                        <input type="text" class="base-form">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key03">
+                                <p>발행연도</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <input type="text" placeholder="발행년(시작)" class="base-form">
+                                        <span>~</span>
+                                        <input type="text" placeholder="발행년(종료)" class="base-form">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key04">
+                            <p>도서관</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>수지도서관</option>
+                                            <option value="2">전체도서관</option>
+                                            <option value="3">보정도서관</option>
+                                            <option value="4">기흥도서관</option>
+                                            <option value="5">구성도서관</option>
+                                            <option value="6">남사도서관</option>
+                                            <option value="7">동백도서관</option>
+                                            <option value="8">동천도서관</option>
+                                            <option value="9">모현도서관</option>
+                                            <option value="10">상현도서관</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key05">
+                                <p>자료실</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>[수지]종합자료실</option>
+                                            <option value="2">전체자료실</option>
+                                            <option value="3">용인시청[민원실]</option>
+                                            <option value="5">[중앙]종합자료실</option>
+                                            <option value="6">[성복]종합자료1</option>
+                                            <option value="7">용인중앙시장역[경전철]</option>
+                                            <option value="8">성복역[신분당선]</option>
+                                            <option value="9">[서농]정기간행물실</option>
+                                            <option value="10">[동백]디지털자료실</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key06">
+                                <p>정렬조건</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>정확도순</option>
+                                            <option value="2">등록일</option>
+                                            <option value="3">서명</option>
+                                            <option value="4">저자</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-key07">
+                                <p>출력건수</p>
+                                <ul><!--오른쪽항목-->
+                                    <li>
+                                        <select class="dropdown">
+                                            <option value="1" selected>10</option>
+                                            <option value="2">20</option>
+                                            <option value="3">50</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <P class="search-btns">
+                            <button type="reset" class="reset-btn">초기화</button>
+                            <button type="submit" class="search-btn">검색</button>
+                        </P>
+                    </fieldset>
+                </form>
+            </div>
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 

@@ -21,6 +21,9 @@
 #main .main-content .base-form div {
     display: flex;
 }
+/* #main .main-content .base-form div input {
+    width: 100px;
+} */
 /* #main .main-content .base-form .search-key04 .dropdown {
     margin-left: 14px;
 } */
@@ -32,13 +35,18 @@
 #main .main-content .base-form .search-key01 ul {
     flex: 1;
 }
+#main .main-content .base-form .search-key01 .dropdown {
+    width: 100%;
+}
 #main .main-content .base-form .dropdown {
     flex: 1;
 }
-#main .main-content .search-key03 li {
+#main .main-content .search-key03 div {
+    flex: 1;
+}
+#main .main-content .search-key02 div {
     display: flex;
 }
-
 
 #main .search-btns {
     display: flex;

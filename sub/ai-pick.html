@@ -6,7 +6,7 @@
     <title>AI추천도서 | 수지도서관</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="styles/ai-pick.css">
+    <link rel="stylesheet" href="styles/sub/ai-pick.css">
     <script src="scripts/sub/서브페이지명.js" defer></script>
 </head>
 <body>
@@ -44,36 +44,66 @@
             <!--버튼 박스 input 1번째는 라디오, 2~3번째는 체크박스-->
             <form class="user-select-area">
                 <!--1~3번째 부분-->
+                <!--연령대-->
                 <p><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
-                    <label>
-                        <input type="radio" name="test" id="연령대1" value="1">유아
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대2" value="2">초등학생
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대3" value="3">중학생
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대4" value="4">고등학생
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대5" value="4">20대
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대6" value="4">30대
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대7" value="4">40대
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대8" value="4">50대
-                    </label>
-                    <label>
-                        <input type="radio" name="test" id="연령대2" value="4">60대 이상
-                    </label>
+                    <label><input type="radio" name="test" id="연령대1" value="1">유아</label>
+                    <label><input type="radio" name="test" id="연령대2" value="2">초등학생</label>
+                    <label><input type="radio" name="test" id="연령대3" value="3">중학생</label>
+                    <label><input type="radio" name="test" id="연령대4" value="4">고등학생</label>
+                    <label><input type="radio" name="test" id="연령대5" value="4">20대</label>    
+                    <label><input type="radio" name="test" id="연령대6" value="4">30대</label>
+                    <label><input type="radio" name="test" id="연령대7" value="4">40대</label>
+                    <label><input type="radio" name="test" id="연령대8" value="4">50대</label>    
+                    <label><input type="radio" name="test" id="연령대2" value="4">60대 이상</label>
                 </p>
+                <!--관심사-->
+                <p>
+                    <label><input type="checkbox" name="userLike" id="userLike01" value="1">인권</label>
+                    <label><input type="checkbox" name="userLike" id="userLike02" value="2">정보</label>
+                    <label><input type="checkbox" name="userLike" id="userLike03" value="3">공부</label>
+                    <label><input type="checkbox" name="userLike" id="userLike04" value="4">진로</label>
+                    <label><input type="checkbox" name="userLike" id="userLike05" value="5">감정</label>
+                    <label><input type="checkbox" name="userLike" id="userLike06" value="6">여가</label>
+                    <label><input type="checkbox" name="userLike" id="userLike07" value="7">일탈</label>
+                    <label><input type="checkbox" name="userLike" id="userLike08" value="8">가정</label>
+                    <label><input type="checkbox" name="userLike" id="userLike09" value="9">친구</label>
+                    <label><input type="checkbox" name="userLike" id="userLike10" value="10">이성</label>
+                </p>
+                <!--관심분야-->
+                <p>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="1">소설</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="2">에세이/시/희곡</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="3">인문</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="4">자기계발</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="5">경제/경영</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="6">가정/취미/실용</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="7">의학/건강</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="8">여행/지리</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="9">과학/기술</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="10">사회과학</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="11">종교</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="12">역사/문학</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="13">인물/평전</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="14">예술/대중문화</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="15">외국어</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="16">컴퓨터</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="17">만화</label>
+                    <label><input type="checkbox" name="userLikeField" id="userLikeField01" value="18">청소년</label>
+                </p>
+                <!--관심도서 3개--><!--선택은 스크립트로 제어-->
+                <p><!--3개 선택할 위치-->
 
+                </p>
+                <!--고르는 구간-->
+                    <ul><!--1~20개--><!--호버 디자인 li안에 div 넣고 포지션 처리함 논 기본값 블록으로 js로온오프 조절-->
+                        <li value="1">책1</li>
+                        <li>책2</li>
+                        <li>책1</li>
+                        <li>책1</li>
+                        <li>책1</li>
+                        <li>책1</li>
+                        <li>책1</li>
+                    </ul>
                 <!--포지션으로 띄우는 버튼들-->
                 <button>이전 단계</button><!--1단계 일땐 가리기-->
                 <button>다음 단계</button>

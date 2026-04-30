@@ -23,7 +23,7 @@ th, td { padding: 10px 5px;}
     display: flex;
     align-items: flex-start;
 }
-.chart tbody tr:last-child { border-bottom: 1px solid #ababab;}
+.chart tbody tr:last-child { border-bottom: 1px solid #555;;}
 #main .contents .grape-area {
     width: 100%;
     aspect-ratio: 1/1;
@@ -40,7 +40,4 @@ th, td { padding: 10px 5px;}
 .chart th {
     border-bottom: 1px solid #e2e2e2;
     width: 100px;
-}
-.chart tr:last-child {
-    border: 0 none;
 }

@@ -167,9 +167,9 @@ input {
     border-bottom: 1px solid #e2e2e2;
 }
 
-.chart tr:last-child td {
+/* .chart tr:last-child td {
     border-bottom: 1px solid #ababab;
-}
+} */
 
 .step-box { /* 절차 */
 

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <aside id="aside">
+        <aside id="aside" class="blind-m">
             <div>열린마당</div>
             <!--공간 나누기--->
             <div>
@@ -45,94 +45,109 @@
                 </ul>
         </aside><!-- // #aside End -->
         <section id="main">
-            <p class="navi">
-                <span>도서관소개</span>
-                <span>도서관현황</span>
-                <span>자료현황</span>
-            </p>
-            <h1 class="tit-main">자료현황</h1>
+            <div class="main-top">
+                <p class="navi">
+                    <span>도서관소개</span>
+                    <span>도서관현황</span>
+                    <span>자료현황</span>
+                </p>
+                <h1 class="tit-main">자료현황</h1>
+            </div>
             <!--아래시작-->
             <!--빗금공간이었던것-->
             <div class="detail-box">
                 <p>수지도서관 전체 자료실에 대한 현황입니다.</p>
             </div><!--/빗금-->
-            <h2>도서</h2>
-            <span>단위(권)</span>
-            <!--그래프 공간-->
-            <div></div>
-            <!--표 공간-->
-            <table class="chart">
-                <thead>
-                    <tr>
-                        <th>전체</th>
-                        <th>259,422</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>일반</th>
-                        <td>165,573</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">어린이</th>
-                        <td>75,916</td>
-                    </tr>
-                    <tr>
-                        <th>참고</th>
-                        <td>259,422</td>
-                    </tr>
-                    <tr>
-                        <th>원서</th>
-                        <td>2457</td>
-                    </tr>
-                    <tr>
-                        <th>점자</th>
-                        <td>2457</td>
-                    </tr>
-                </tbody>
-            </table><!--/도서-->
-            <h2>비도서</h2>
-            <span>단위(점)</span>
-            <!--그래프 공간-->
-            <div></div>
-            <!--표 공간-->
-            <table class="chart">
-                <thead>
-                    <tr>
-                        <th>전체</th>
-                        <th>3,689</th> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>DVD</th>
-                        <td>3,689</td>
-                    </tr>
-                </tbody>
-            </table><!--비도서-->
-            <h2>정기간행물</h2>
-            <span>단위(종)</span>
-            <!--그래프 공간-->
-            <div></div>
-            <!--표 공간-->
-            <table class="chart">
-                <thead>
-                    <tr>
-                        <th>전체</th>
-                        <th>86</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>일반잡지</th>
-                        <td>76</td>
-                    </tr>
-                    <tr>
-                        <th>어린이잡지</th>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-            </table><!--정기 간행물-->
+            <ul class="contents">
+                <li class="chart-list">
+                    <h2>도서<span class="chart-info">단위(권)</span></h2>
+                    <!--그래프 공간-->
+                    <div class="chart-box">
+                        <div class="grape-area"></div>
+                        <!--표 공간-->
+                        <table class="chart">
+                            <thead>
+                                <tr>
+                                    <th>전체</th>
+                                    <th>259,422</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>일반</th>
+                                    <td>165,573</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">어린이</th>
+                                    <td>75,916</td>
+                                </tr>
+                                <tr>
+                                    <th>참고</th>
+                                    <td>259,422</td>
+                                </tr>
+                                <tr>
+                                    <th>원서</th>
+                                    <td>2457</td>
+                                </tr>
+                                <tr>
+                                    <th>점자</th>
+                                    <td>2457</td>
+                                </tr>
+                            </tbody>
+                        </table><!--/도서-->
+                    </div>
+                </li>
+                <li class="chart-list">
+                    <h2>비도서</h2>
+                    <span>단위(점)</span>
+                    <div class="chart-box">
+                        <!--그래프 공간-->
+                        <div class="grape-area"></div>
+                        <!--표 공간-->
+                        <table class="chart">
+                            <thead>
+                                <tr>
+                                    <th>전체</th>
+                                    <th>3,689</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>DVD</th>
+                                    <td>3,689</td>
+                                </tr>
+                            </tbody>
+                        </table><!--비도서-->
+                    </div>
+                </li>
+                <li class="chart-list">
+                    <h2>정기간행물</h2>
+                    <span>단위(종)</span>
+                    <div class="chart-box">
+                        <!--그래프 공간-->
+                        <div class="grape-area"></div>
+                        <!--표 공간-->
+                        <table class="chart">
+                            <thead>
+                                <tr>
+                                    <th>전체</th>
+                                    <th>86</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>일반잡지</th>
+                                    <td>76</td>
+                                </tr>
+                                <tr>
+                                    <th>어린이잡지</th>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table><!--정기 간행물-->
+                    </div>
+                </li>
+            </ul><!--contents-->
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 

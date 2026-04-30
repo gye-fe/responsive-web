@@ -61,20 +61,6 @@ input {
     color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 /* 3. 레이아웃 클래스 (공통 사용) */
 #main { padding: 20px;}
 #main .main-top {
@@ -138,6 +124,8 @@ button:hover {
 .detail-box { /* 전 빗금이었던 박스 */
     border-top: 1px solid #222222;
     background-color: #f6f6f6;
+    padding: 10px;
+    margin-bottom: 25px;
 }
 
 .post-cont { /* 테이블 */
@@ -146,8 +134,22 @@ button:hover {
 .post-cont td {
     border-bottom: 1px solid #e2e2e2;
 }
+.post-cont tr:first-child td {
+    border-top: 1px solid #ababab;
+}
 .post-cont tr:last-child td {
     border-bottom: 1px solid #ababab;
+}
+.post-cont table { table-layout:fixed} 
+.post-cont table th {
+    text-align: center;
+}
+
+.post-cont.table-line td {padding: 10px 0;}
+.post-cont .table-list {
+    white-space: nowrap; /* 줄바꿈 넘어가지 않게 /한 줄로 */
+    overflow-x: hidden;  /* 넘친 부분 화면에 표시 x */
+    text-overflow: ellipsis; /* 넘친 부분 ...으로 표현 */ 
 }
 
 .img-cont li { /* 이미지만 있는 페이지 (큐레이션) */
@@ -157,12 +159,14 @@ button:hover {
 .chart { /* 표 */
     border-top: 2px solid #555;
 }
+
 .chart th {
     background-color: #f7f7f7;
 }
 .chart td {
     border-bottom: 1px solid #e2e2e2;
 }
+
 .chart tr:last-child td {
     border-bottom: 1px solid #ababab;
 }
@@ -190,6 +194,8 @@ button:hover {
 
 @media screen and (max-width: 767px){
     .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+    .post-cont .blind-m {display: none;}
+    .post-cont .date {width: 80px;}
 }
 
 @media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */

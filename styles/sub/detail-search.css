@@ -9,43 +9,44 @@
 }
 /* #aside {} */
 
-#main {
-    padding: 0 20px;
-}
-#main .main-top {
-    padding: 30px 0;
-}
-#main .main-content {
+#main .contents {
     padding-top: 30px;
 }
-#main .main-content .base-form div {
+#main .contents .form-area { padding: 15px; border: 1px solid #e2e2e2;}
+#main .contents .form-area div {
     display: flex;
+    margin-top: 5px;
 }
-/* #main .main-content .base-form div input {
-    width: 100px;
-} */
-/* #main .main-content .base-form .search-key04 .dropdown {
-    margin-left: 14px;
-} */
-#main .main-content .base-form p {
+#main .contents .form-area .search-key01 {
+    margin: 0;
+}
+#main .contents .form-area p {
     width: 100px;
     padding: 20px 10px;
     margin-right: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
-#main .main-content .base-form .search-key01 ul {
+#main .contents .form-area .search-key01 ul {
     flex: 1;
 }
-#main .main-content .base-form .search-key01 .dropdown {
+#main .contents .form-area .search-key01 .dropdown {
     width: 100%;
+    height: 50%;
+    /* margin-bottom: 5px; */
 }
-#main .main-content .base-form .dropdown {
+#main .contents .form-area .dropdown {
+    flex: 1;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+}
+#main .contents .search-key03 div {
     flex: 1;
 }
-#main .main-content .search-key03 div {
+#main .contents .search-key02 div {
     flex: 1;
-}
-#main .main-content .search-key02 div {
     display: flex;
+    flex-direction: column;
 }
 
 #main .search-btns {
@@ -59,4 +60,8 @@
 /*width:640부터 오토로 바뀜*/
 #main .search-btns button {
     width: 100%;
+}
+#main .search-btns .reset-btn {
+    background-color: #fff;
+    color: #222;
 }

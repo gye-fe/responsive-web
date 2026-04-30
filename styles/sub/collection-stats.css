@@ -21,18 +21,25 @@ th, td { padding: 10px 5px;}
 }
 #main .contents .chart-list .chart-box {
     display: flex;
-    height: 100%;
+    align-items: flex-start;
 }
+.chart tbody tr:last-child { border-bottom: 1px solid #ababab;}
 #main .contents .grape-area {
     width: 100%;
     aspect-ratio: 1/1;
     background-color: #e1e1e1;
+}
+#main .contents .cap-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .chart thead th:nth-child(2) {
     background-color: transparent;
 }
 .chart th {
     border-bottom: 1px solid #e2e2e2;
+    width: 100px;
 }
 .chart tr:last-child {
     border: 0 none;

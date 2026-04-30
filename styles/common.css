@@ -80,7 +80,6 @@ button:hover {
 #main .main-top {
     padding: 20px 0;
     border-bottom: 1px solid #e2e2e2;
-    font-size: 26px;
 }
 #main .contents {padding-top: 30px;}
 .wrapper { width: 100%; min-width: 320px; }
@@ -100,7 +99,7 @@ button:hover {
 .tit-sub { color: #111; font-size: 20px; font-weight: 500; line-height: 1.4; } /* 본문의 소제목 - size */
 
 /* 공통 border 스타일 */
-.base-form, .dropdown, .icon-btn {
+.base-form, .dropdown, .icon-btn li {
     border: 1px solid #e2e2e2;
 }
 .navi span {  /* 상단 경로 */

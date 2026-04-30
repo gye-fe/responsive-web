@@ -29,11 +29,11 @@
     padding: 20px 10px;
     margin-right: 10px;
 }
-#main .main-content .base-form div ul {
+#main .main-content .base-form .search-key01 ul {
     flex: 1;
 }
 #main .main-content .base-form .dropdown {
-    width: 100%;
+    flex: 1;
 }
 #main .main-content .search-key03 li {
     display: flex;

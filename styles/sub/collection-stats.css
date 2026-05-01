@@ -2,12 +2,8 @@
     .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
 }
 
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    body { 
-        font-size: 18px;
-    }
-}
 /* #aside {} */
+
 th, td { padding: 10px 5px;}
 #main .contents .chart-list {
     width: 100%;
@@ -22,6 +18,7 @@ th, td { padding: 10px 5px;}
 #main .contents .chart-list .chart-box {
     display: flex;
     align-items: flex-start;
+    gap:5px;
 }
 .chart tbody tr:last-child { border-bottom: 1px solid #555;;}
 #main .contents .grape-area {

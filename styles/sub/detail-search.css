@@ -8,7 +8,9 @@
     }
 }
 /* #aside {} */
-
+.spacing {
+    flex: 1;
+}
 #main .contents {
     padding-top: 30px;
 }
@@ -20,36 +22,53 @@
 #main .contents .form-area .search-key01 {
     margin: 0;
 }
+#main .contents .form-area .search-key01 li {
+    margin-bottom: 5px;
+}
 #main .contents .form-area p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
     padding: 20px 10px;
     margin-right: 10px;
     background-color: #f5f5f5;
-    text-align: center;
 }
-#main .contents .form-area .search-key01 ul {
-    flex: 1;
-}
-#main .contents .form-area .search-key01 .dropdown {
+
+
+#main .contents .form-area .search-key01 .dropdown,
+#main .contents .form-area .search-key06 .dropdown {
     width: 100%;
-    height: 50%;
-    /* margin-bottom: 5px; */
+    /* height: 50%; */
 }
 #main .contents .form-area .dropdown {
     flex: 1;
     padding: 10px 15px;
     margin-bottom: 5px;
+    font-size: 16px;
 }
-#main .contents .search-key03 div {
-    flex: 1;
+.select-wide {
+    max-width: 250px;
+    margin: 0;
 }
+
 #main .contents .search-key02 div {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
+.search-key03 .years-gap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+.search-key06 div {
+    display: flex;
+    gap:5px;
+}
 
-#main .search-btns {
+/*버튼 구간*/
+#main .btn-area {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -58,10 +77,16 @@
     gap:3px;
 }
 /*width:640부터 오토로 바뀜*/
-#main .search-btns button {
+#main .btn-area button {
     width: 100%;
+    padding: 10px 15px;
 }
-#main .search-btns .reset-btn {
+#main .btn-area .reset-btn {
     background-color: #fff;
     color: #222;
+    border:1px solid #666;
+}
+#main .btn-area .search-btn {
+    background-color: #1b6eab;
+    color: #FFF;
 }

@@ -1,17 +1,13 @@
-@media screen and (max-width: 767px){
-    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-}
+* { word-break: keep-all; overflow-wrap: break-word;}
+  
+br {display: none;}
 
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    body { 
-        font-size: 18px;
-    }
-}
 /* #aside {} */
+
 #main .contents .user-select-area input[type="radio"], 
-#main .contents .user-select-areainput[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
+#main .contents .user-select-area input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
 }
 #main .contents .detail-box dt {
     font-weight: 500;
@@ -21,8 +17,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 50px;
-    gap:20px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border: 1px solid #e2e2e2;
 }
 #main .contents .process-info li {
@@ -30,7 +25,14 @@
     flex-shrink: 0;
     width: 100%;
     text-align: center;
+    padding: 0 5px;
 }
+#main .contents .process-info .non-break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*pc로 바뀔때 버튼이 앱솔루트화됨*/
 #main .contents .user-select-area {
     position: relative;
@@ -41,12 +43,14 @@
 }
 #main .contents .user-select-area .on { display: block;}
 #main .contents .user-select-area legend {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 #main .contents .user-select-area .btns-area {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap:10px;
+    margin-bottom: 40px;
 }
 .btns-area label {
     width:100%;
@@ -60,13 +64,23 @@
     background-color: #f9f9fb;
 }
 .btns-area input:checked + label {
-    background-color: #1b6eab;
+    background-color: #cce6fa;
+    color: #1b6eab;
+    border: 1px solid #1b6eab;
 }
+
+/*리스트 구역*/
+.ai-pick-list {
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 25px 0;
+}
+
+/*버튼 구역*/
 #main .user-select-area .select-process-btns {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 40px;
     padding: 0 15px;
     gap:3px;
 }
@@ -77,10 +91,47 @@
     border: 1px solid #727272;
 }
 #main .user-select-area .select-process-btns .prev-btn {
+    display: none; /*js로 관리*/
     background-color: #fff;
     border: 1px solid #727272;
 }
+#main .user-select-area .select-process-btns .result-btn {
+    display: none;
+}
+.select-process-btns button.on {
+    background-color: #1b6eab;
+    color: #FFF;
+}
+
 #main .user-select-area .select-process-btns .reset { display: none;}
+
+
+/*반응형 구간*/
+@media screen and (max-width: 767px){
+    #main .contents .process-info li,
+    .btns-area label {
+        font-size: 14px;
+    }
+    .break-on {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
+    #main .contents .user-select-area legend {
+        margin-bottom: 40px;
+    }
+    #main .contents .user-select-area .btns-area {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:10px;
+    }
+    .select-process-btns {
+        position: absolute;
+        top:-10px;
+        right:0;
+    }
+}
 
 
 

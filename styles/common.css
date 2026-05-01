@@ -83,6 +83,9 @@ input {
 .tit-main { color: #111; font-size: 26px; font-weight: 500; line-height: 1.2; } /* 본문의 대제목 - size */
 .tit-sec { color: #111; font-size: 20px; font-weight: 500; line-height: 1.4; } /* 본문의 중제목 - size */ 
 .tit-sub { color: #111; font-size: 20px; font-weight: 500; line-height: 1.4; } /* 본문의 소제목 - size */
+.gt { /* 공통 */
+    background-color: #303030;
+}
 
 /* 공통 border 스타일 */
 .base-form, .dropdown, .icon-btn li {

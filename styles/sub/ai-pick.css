@@ -9,6 +9,8 @@ br {display: none;}
     position: absolute;
     opacity: 0;
 }
+
+/*detail-box 영역*/
 #main .contents .detail-box dt {
     font-weight: 500;
     font-size: 20px;
@@ -26,6 +28,15 @@ br {display: none;}
     width: 100%;
     text-align: center;
     padding: 0 5px;
+}
+#main .contents .process-info li span {position: relative;}
+
+#main .contents .process-info li .on::after {
+    content: "";
+    position: absolute; left:0; bottom: -10px;
+    height: 5px;
+    width: 100%;
+    background-color: #1b6eab;
 }
 #main .contents .process-info .non-break {
     display: flex;

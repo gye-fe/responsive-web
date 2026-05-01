@@ -1,9 +1,7 @@
-@media screen and (max-width: 767px){
-    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-}
-
+* { word-break: keep-all; overflow-wrap: break-word;}
+br {display: none;}
 /* #aside {} */
-
+table { font-size: 14px;}
 th, td { padding: 10px 5px;}
 #main .contents .chart-list {
     width: 100%;
@@ -36,5 +34,16 @@ th, td { padding: 10px 5px;}
 }
 .chart th {
     border-bottom: 1px solid #e2e2e2;
-    width: 100px;
+    width: 70px;
+}
+
+/*반응형 구간*/
+@media screen and (max-width: 767px){
+    #main .contents .process-info li,
+    .btns-area label {
+        font-size: 14px;
+    }
+    .break-on {
+        display: block;
+    }
 }

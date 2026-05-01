@@ -10,39 +10,28 @@
     <script src="scripts/sub/서브페이지명.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container inner">
         <aside id="aside" class="blind-m">
-            <div>열린마당</div>
-            <!--공간 나누기--->
-            <div>
-                <ul>
-                    <li>도서관소식</li>
-                    <li>보도자료</li>
-                    <li>도서관연중행사</li>
-                    <li>도서관 카드뉴스</li>
-                    <li>자주하는질문</li>
-                    <li>묻고답하기</li>
-                    <li>설문조사</li>
-                    <li>
-                        <dl>
-                            <dt>원클릭대관신청</dt>
-                            <dd>수지도서관대관신청</dd>
-                            <dd>원클릭대관신청</dd>
-                            <dd>원클릭대관신청안내</dd>
-                        </dl>
-                    </li>
-                    <li>견학신청</li>
-                    <li>
-                        <dl>
-                            <dt>시민참여</dt>
-                            <dd>자원활동가</dd>
-                            <dd>자원봉사신청안내</dd>
-                            <dd>강사지원신청</dd>
-                            <dd>도서관공모</dd>
-                        </dl>
-                    </li>
-                    <li>도서기증</li>
-                </ul>
+            <h1>독서마당</h1>
+            <div class="side-tab">
+                <dl>
+                    <dt>추천도서</dt>
+                </dl>
+                <dl class="active">
+                    <dt>AI추천도서</dt>
+                </dl>
+                <dl>
+                    <dt>독서공감</dt>
+                </dl>
+                <dl>
+                    <dt>발간/특화자료</dt>
+                </dl>
+                <dl>
+                    <dt>올해의책함께읽기</dt>
+                </dl>
+                <dl>
+                    <dt>독서동아리</dt>
+                </dl>
             </div>
         </aside><!-- // #aside End -->
         <section id="main">
@@ -64,18 +53,18 @@
                 </div><!--/빗금-->
                 <h2 class="blind">4단계 과정을 거치면 AI가 알맞은 책을 추천해드립니다</h2>
                 <ol class="process-info">
-                    <li>연령<br class="break-on">정보</li>
+                    <li><span class="on">연령<br class="break-on">정보</span></li>
                     <li class="non-break"><span>관심사</span></li>
-                    <li>관심<br class="break-on">분야</li>
-                    <li>관심<br class="break-on">도서</li>
-                    <li>추천<br class="break-on">결과</li>
+                    <li><span>관심<br class="break-on">분야</span></li>
+                    <li><span>관심<br class="break-on">도서</span></li>
+                    <li><span>추천<br class="break-on">결과</span></li>
                 </ol>
                 <!--버튼 박스 input 1번째는 라디오, 2~3번째는 체크박스-->
                 <form class="user-select-area">
                     <!--1~3번째 부분-->
                     <!--userAge-->
-                    <div><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
-                        <legend class="blind">당신의 연령대를 선택해주세요</legend>
+                    <div class="on"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
+                        <legend>당신의 연령대를 선택해주세요</legend>
                         <div class="btns-area">
                             <input type="radio" name="userAge" id="userAge1" value="1"><label for="userAge1">유아</label>
                             <input type="radio" name="userAge" id="userAge2" value="2"><label for="userAge2">초등학생</label>
@@ -105,8 +94,8 @@
                         </div>
                     </div>
                     <!--관심분야-->
-                    <div class="on">
-                        <legend>당신의 관심분야를 선택해주세요<span class="dupli-info">중복선택가능</span></legend>
+                    <div>
+                        <legend class="blind">당신의 관심분야를 선택해주세요<span class="dupli-info">중복선택가능</span></legend>
                         <div class="btns-area">
                             <input type="checkbox" name="userLikeField" id="userLikeField01" value="1"><label for="userLikeField01">소설</label>
                             <input type="checkbox" name="userLikeField" id="userLikeField01" value="2"><label for="userLikeField01">에세이/시/희곡</label>

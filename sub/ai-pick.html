@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/sub/ai-pick.css">
-    <script src="scripts/sub/서브페이지명.js" defer></script>
+    <script src="../scripts/sub/ai-pick.js" defer></script>
 </head>
 <body>
     <div class="container inner">
@@ -66,15 +66,15 @@
                     <div class="on"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
                         <legend>당신의 연령대를 선택해주세요</legend>
                         <div class="btns-area">
-                            <input type="radio" name="userAge" id="userAge1" value="1"><label for="userAge1">유아</label>
-                            <input type="radio" name="userAge" id="userAge2" value="2"><label for="userAge2">초등학생</label>
-                            <input type="radio" name="userAge" id="userAge3" value="3"><label for="userAge3">중학생</label>
-                            <input type="radio" name="userAge" id="userAge4" value="4"><label for="userAge4">고등학생</label>
-                            <input type="radio" name="userAge" id="userAge5" value="5"><label for="userAge5">20대</label>    
-                            <input type="radio" name="userAge" id="userAge6" value="6"><label for="userAge6">30대</label>
-                            <input type="radio" name="userAge" id="userAge7" value="7"><label for="userAge7">40대</label>
-                            <input type="radio" name="userAge" id="userAge8" value="8"><label for="userAge8">50대</label>    
-                            <input type="radio" name="userAge" id="userAge9" value="9"><label for="userAge9">60대 이상</label>
+                            <button data-age="유아">유아</button>
+                            <button data-age="초등학생">초등학생</button>
+                            <button data-age="중학생">중학생</button>
+                            <button data-age="고등학생">고등학생</button>
+                            <button data-age="20대">20대</button>
+                            <button data-age="30대">30대</button>
+                            <button data-age="40대">40대</button>
+                            <button data-age="50대">50대</button>
+                            <button data-age="60대이상">60대 이상</button>
                         </div>
                     </div>
                     <!--관심사-->

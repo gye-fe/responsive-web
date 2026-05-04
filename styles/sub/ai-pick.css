@@ -63,7 +63,7 @@ br {display: none;}
     gap:10px;
     margin-bottom: 40px;
 }
-.btns-area label {
+.btns-area button {
     width:100%;
     aspect-ratio: 1/1;
     border-radius: 10px;
@@ -74,7 +74,7 @@ br {display: none;}
     cursor: pointer;
     background-color: #f9f9fb;
 }
-.btns-area input:checked + label {
+.user-age .on {
     background-color: #cce6fa;
     color: #1b6eab;
     border: 1px solid #1b6eab;

@@ -52,7 +52,7 @@
     font-weight: 500;
     border-radius: 3px;
     font-size: 16px;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 10px 10px 30px;
 }
 /*리스트*/
 #main .contents .cont-list {
@@ -68,7 +68,7 @@
 }
 .cont-list .img-box {
     width: 100%;
-    height: 100px;
+    aspect-ratio: 1 / 1;
     background-color: #eee; /*임시*/
 }
 
@@ -78,7 +78,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 15px 0;
+    margin: 15px 0 10px 0;
+    font-weight: 500;
 }
 .cont-list .curation-card .lb-cate {
     font-size: 14px;

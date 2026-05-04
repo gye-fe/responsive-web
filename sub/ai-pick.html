@@ -60,11 +60,11 @@
                     <li><span>추천<br class="break-on">결과</span></li>
                 </ol>
                 <!--버튼 박스 input 1번째는 라디오, 2~3번째는 체크박스-->
-                <form class="user-select-area">
+                <div class="user-select-area">
                     <!--1~3번째 부분-->
                     <!--userAge-->
-                    <div class="on"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
-                        <legend>당신의 연령대를 선택해주세요</legend>
+                    <div class="user-age on"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
+                        <h3>당신의 연령대를 선택해주세요</h3>
                         <div class="btns-area">
                             <button data-age="유아">유아</button>
                             <button data-age="초등학생">초등학생</button>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <!--관심사-->
-                    <div>
+                    <div class="user-like">
                         <legend class="blind">당신의 관심사를 선택해주세요<span class="dupli-info">중복선택가능</span></legend>
                         <div class="btns-area">
                             <input type="checkbox" name="userLike" id="userLike01" value="1"><label for="userLike01">인권</label>
@@ -156,8 +156,8 @@
                         <!--마지막 단계 시 나타나는 버튼 - 초기화 -->
                         <button class="reset">다시추천받기</button>
                     </div>
-                </form>
-            </div>
+                </div><!--/user-select-area-->
+            </div><!--contents-->
             <!--결과 값 공간 평소엔 가리고 결과 나올때 나타내기 js로 관리-->
         </section><!-- // #main End -->
     </div><!-- // .container End -->

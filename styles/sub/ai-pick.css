@@ -53,7 +53,7 @@ br {display: none;}
     display: none;
 }
 #main .contents .user-select-area .on { display: block;}
-#main .contents .user-select-area legend {
+#main .contents .user-select-area h3 {
     margin-bottom: 15px;
 }
 #main .contents .user-select-area .btns-area {
@@ -74,7 +74,7 @@ br {display: none;}
     cursor: pointer;
     background-color: #f9f9fb;
 }
-.user-age .on {
+button.on {
     background-color: #cce6fa;
     color: #1b6eab;
     border: 1px solid #1b6eab;
@@ -100,6 +100,7 @@ br {display: none;}
     padding: 10px 15px;
     background-color: #727272;
     border: 1px solid #727272;
+    font-size: 1rem;
 }
 #main .user-select-area .select-process-btns .prev-btn {
     display: none; /*js로 관리*/
@@ -109,16 +110,16 @@ br {display: none;}
 #main .user-select-area .select-process-btns .result-btn {
     display: none;
 }
-.select-process-btns button.on {
+/* .select-process-btns {
     background-color: #1b6eab;
     color: #FFF;
-}
+} */
 
 #main .user-select-area .select-process-btns .reset { display: none;}
 
 
 /*반응형 구간*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px){/*모바일 최대*/
     #main .contents .process-info li,
     .btns-area label {
         font-size: 14px;
@@ -127,7 +128,9 @@ br {display: none;}
         display: block;
     }
 }
+@media screen and (min-width:768px){ /*태블릿 최소*/
 
+}
 @media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
     #main .contents .user-select-area legend {
         margin-bottom: 40px;

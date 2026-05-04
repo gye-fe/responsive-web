@@ -83,17 +83,22 @@ const data = [
 const contentsArea = document.querySelector(".contents");//본문
 const userLikeBox = contentsArea.querySelector(".user-like"); //2단계
 const userAgeBox = contentsArea.querySelector(".user-age");//1단계 div
-const processBtns = contentsArea.querySelector(".select-process-btns");//행동버튼
+const processBtns = document.querySelector(".select-process-btns");//행동버튼
 const nextBtn = processBtns.querySelector(".next-btn");
 //로직 구간 ,함수작성부분
 
 contentsArea.addEventListener("click", (e)=>{
-  if (e.target.tagName === "BUTTON"){
-    console.log("클릭됨");
+  if(e.target.tagName === "BUTTON"){
     e.target.classList.add("on");
-    nextBtn.classList.add("on"); 
-  }
+    nextBtn.style.backgroundColor = "#1b6eab"
+    nextBtn.style.color = "#FFF;"
+    }
 
+  contentsArea.forEach(function(b){
+      b.classList.remove("on");
+    });
+    this.classList.add("on");
+console.log("클릭됨"); 
 })
 nextBtn.addEventListener("click", ()=>{
   userAgeBox.classList.remove("on");

@@ -13,7 +13,7 @@
 .tit-box {
     display: flex;
 }
-.more { /* +표시*/ 
+.more { /* + 표시*/ 
     width: 36px;
     height: 36px;
     padding: 5px;
@@ -54,7 +54,7 @@
     background-color: #c83156;
 }
 
-/*공통 - 슬라이드 배너*/
+/*공통 - 슬라이드 배너 스타일 */
 .list-wrap {
     overflow: hidden;
     overflow-x: auto;
@@ -64,7 +64,7 @@
     display: flex;
     padding-top: 16px;
 }
-/*플로팅스타일*/
+/*공통 - 플로팅스타일*/
 .feature-area {
     width: 100%;
     padding: 25px 20px;
@@ -214,7 +214,7 @@
 }
 
 
-/*  */
+/* 메인상단 - 자주찾는 메뉴 */
 .main-cont .quick-btns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -239,11 +239,8 @@
     margin-bottom: 8px;
 }
 .quick-btns a span {
-    font-size: 16px;
+    font-size: 1em
 }
-
-
-
 
 
 /*팝업존*/
@@ -258,7 +255,7 @@
     width: 100%;
     overflow: hidden;
 }
-.img-box {
+.popup-zone .img-box {
     width: 280px;
     height: 280px;
     margin-right: 15px;
@@ -266,9 +263,6 @@
     flex-shrink: 0;
     overflow: hidden;
 }
-
-/*도서관 아카이브*/
-
 
 /*도서관 소식 - 공지사항*/
 
@@ -312,21 +306,13 @@
     padding: 0;
 }
 
-.box-tit {
-    font-size: 18px;
-    font-weight: 500;
-    padding:5px 20px;
-    width: 100%;
-    background-color: #c83156;
-    color: #fff;
-}
-.btn-box {
+.guide .btn-box {
     display: flex;
     margin-bottom: 16px;
     gap:8px
 }
 
-.btn-box p { width: calc(50% - 8px);}
+.guide .btn-box p { width: calc(50% - 8px);}
 
 .btn-box a {
     display: inline-block;
@@ -339,7 +325,14 @@
     box-shadow: 10px 10px 25px rgba(0, 0, 0, .1);
     border-radius: 10px;
     margin-top: 10px;
-    /* background-color: #b01c1c; */
+}
+.guide .box-tit {
+    font-size: 18px;
+    font-weight: 500;
+    padding:5px 20px;
+    width: 100%;
+    background-color: #c83156;
+    color: #fff;
 }
 
 .desc {padding: 20px 30px;} /*테이블 내부 패딩*/
@@ -404,7 +397,6 @@
 }
 /*문화 행사*/
 
-/*수정*/
 .event-box { /*li*/
     width: 235px;
     border: 1px solid #e2e2e2;
@@ -430,7 +422,6 @@
 .event-box .closed { background-color: #8e9297;}
 .event-box .pending  {font-size: 13px; background-color: #81b148;}
 
-/*기존*/
 
 .event-title {
     margin: 20px 0;
@@ -451,42 +442,17 @@
     line-height: 1.1;
 }
 
-.event-box .target {margin-top: 5px;}
+.event-box .target {margin-top: 8px;}
 
-
-/*여기까지 기존*/
 .item-info .stand-by{margin-left: 10px;}
 
-    
 
 /* curation - 북큐레이션 */
-
-.curation .title {
-    display: flex;
-}
 
 
 .curation .tab-btn {
     margin-top: 16px;
     display: flex;
-}
-/* .curation .tab-btn button {
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 4px;
-    padding: 8px 10px;
-    background-color: #e2e2e2;
-    border-radius: 50px;
-} */
-.tab-btn button.active {
-    color: #fff;
-    background-color: #1B6EAB;
-}
-.tab-btn button a {
-    font-size: 16px;
-}
-.tab-btn button.active a {
-    color: #fff;
 }
 
 .curation .slide-banner-wrap {
@@ -533,11 +499,8 @@
 
 
 
-
-
-
-/*반응형*/
-@media screen and (min-width: 520px) {
+/*반응형 부분*/
+@media screen and (min-width: 520px) { 
     .main-cont .login .in-box div {
         width: 70%;
     }
@@ -556,15 +519,8 @@
     }
 }
 
-@media screen and (min-width:768px){ /*태블릿 최소*/
-    /*하영 언니껏*/
-    .event .event-box {width: 314px;}
-    .event-box .event-title {font-size: 20px;}
-    .item-info {font-size: 17px;}
-    .seat-table tbody tr td {font-size: 18px; text-align: center;}
-    .seat-table tr th:first-child {text-align: left;}
-    .seat-table th {text-align: center;}
-    
+@media screen and (min-width:768px){ /*태블릿 최소*/    
+    /*메인 상단*/
     .top-box .first form {
         display: flex;
     }
@@ -593,7 +549,6 @@
         justify-content: center;  /* 세로방향 가운데 정렬 */
     }
     
-    
     .top-box .first .rest-area {
         display: flex;
     }
@@ -610,57 +565,52 @@
         padding-left: 20px;
     }
 
-
     .top-box .login legend {
         height: 58px;
         padding: 12px 0;
         box-sizing: border-box;
     }
+    /*이용안내*/
+    .seat-table tbody tr td {font-size: 18px; text-align: center;}
+    .seat-table tr th:first-child {text-align: left;}
+    .seat-table th {text-align: center;}
 
-    .main-cont .quick-btns a span {
-        font-size: 18px;
-    }
+    /*문화행사*/
+    .culture-banner .event-box {width: 314px;}
+    .item-info {font-size: 17px;}
+    .event-box .event-title {font-size: 20px;}
 
-
-    .curation .tab-btn button {
-        font-size: 16px;
-    }
+    /*큐레이션*/
+    
     .curation .slide-banner li.show {
         display: flex;
     }
-    .slide-banner li.show dl {
+
+    .curation .slide-banner li.show dl {
         width: 260px;
         height: 380px;
         margin-left: 10px;
     }
-    .slide-banner li.show dt {
+    .curation .slide-banner li.show dt {
         font-size: 24px;
         font-weight: 600;
         color: #333;
         margin-bottom: 10px;
     }
-    .slide-banner li.show dd {
+    .curation .slide-banner li.show dd {
         display: block;
         font-weight: 500;
     }
-    .slide-banner li.show dd:last-child {
+    .curation .slide-banner li.show dd:last-child {
         color: #646464;
         margin-top: 10px;
     }
 }
 
 
-@media screen and (min-width: 1100px){
-    .main-cont .quick-btns {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-    }
-    
-}
 
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) { /*데스크탑 최소너비*/
+    body { line-height: 1.4;}
     .banner-wrap {
         display: flex;
         overflow: hidden;
@@ -672,21 +622,14 @@
     .banner-wrap .sec-area:last-child {
         width: calc(60% - 20px);
     }
-
-    .img-box {
-        width: 400px;
-        height: 400px;
-        margin-right: 15px;
-        background-color: #bebebe;
-        flex-shrink: 0;
-        overflow: hidden;
-    }
     #main .tab-btn button,
     #main .tab-btn button a {
         font-size: 20px;
         min-width: 170px;
     }
 
+    
+    /*로그인 부분 맨 상단*/
     .top-box {
         width: 100%;
         display: flex;
@@ -700,6 +643,7 @@
     .top-box .login {
         width: 40%;
     }
+    /*큐레이션*/
 
     .curation .curation-box {
         display: flex;
@@ -709,9 +653,7 @@
         flex-direction: column;  /* 세로로 정렬 */
         margin-right: 16px;
     }
-    /* .curation-box .tab-btn button {
-        margin-bottom: 8px;
-    } */
+
     .curation-box .tab-btn button:last-child {
         margin-top: 16px;
         position: relative;
@@ -730,28 +672,18 @@
     .feature-area li dd { font-size: 16px;}
     .feature-area li span { padding: 15px;}
     
-    /*팝업존*/
-    body {  line-height: 1.4;}
-    .m-tit {
-    font-size: 34px;
-    font-weight: 600;
-    }    
-    .sub-tit {
-        font-size: 17px;
-    }
-    .img-box {
-        
-        width: 350px;
-        height: 350px;
-        margin-right: 15px;
-        background-color: #bebebe;
-        flex-shrink: 0;
-        overflow: hidden;
+    /*팝업존*/ 
+    .popup-zone .img-box {
+        width: 400px;
+        height: 400px;
     }
     /*도서관 아카이브*/
     .sel-box a {
         margin-top: 5px;
     }
+
+
+
 
 }
 /*혜진언니*/
@@ -759,4 +691,12 @@
     .rest-area .open-time {
         height: 180px;
     }
+}
+@media screen and (min-width: 1100px){
+    .main-cont .quick-btns {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
 }

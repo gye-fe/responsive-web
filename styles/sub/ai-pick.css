@@ -49,12 +49,18 @@ br {display: none;}
     position: relative;
 }
 /*임시로 넣은거 div2~4가림*/
-#main .contents .user-select-area div {
+#main .contents .user-select-area .off {
     display: none;
 }
 #main .contents .user-select-area .on { display: block;}
 #main .contents .user-select-area h3 {
     margin-bottom: 15px;
+}
+#main .contents .user-select-area h3 .dupli-info {
+    margin-left: 8px;
+    font-size: 1em;
+    color: #666;
+    font-weight: 400;
 }
 #main .contents .user-select-area .btns-area {
     width: 100%;
@@ -74,7 +80,7 @@ br {display: none;}
     cursor: pointer;
     background-color: #f9f9fb;
 }
-button.on {
+.btns-area button.on {
     background-color: #cce6fa;
     color: #1b6eab;
     border: 1px solid #1b6eab;
@@ -89,6 +95,7 @@ button.on {
 
 /*버튼 구역*/
 #main .user-select-area .select-process-btns {
+    display: block;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -102,10 +109,14 @@ button.on {
     border: 1px solid #727272;
     font-size: 1rem;
 }
+#main .user-select-area .select-process-btns button.on {
+    background-color: #1b6eab;
+    color: #FFF;
+}
 #main .user-select-area .select-process-btns .prev-btn {
     display: none; /*js로 관리*/
     background-color: #fff;
-    border: 1px solid #727272;
+    border: 1px solid #727272; 
 }
 #main .user-select-area .select-process-btns .result-btn {
     display: none;

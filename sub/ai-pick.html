@@ -62,8 +62,14 @@
                 <!--버튼 박스 input 1번째는 라디오, 2~3번째는 체크박스-->
                 <div class="user-select-area">
                     <!--1~3번째 부분-->
+                    <!--스크립트 시험용 지울예정-->
+                    <div class="user-test">
+                        <h3>테스트</h3>
+                        <div class="btns-area">
+                        </div>
+                    </div>
                     <!--userAge-->
-                    <div class="user-age on"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
+                    <div class="off"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
                         <h3>당신의 연령대를 선택해주세요</h3>
                         <div class="btns-area">
                             <button data-age="유아">유아</button>
@@ -74,50 +80,54 @@
                             <button data-age="30대">30대</button>
                             <button data-age="40대">40대</button>
                             <button data-age="50대">50대</button>
-                            <button data-age="60대이상">60대 이상</button>
+                            <button data-age="60대 이상">60대 이상</button>     
                         </div>
+                        
                     </div>
+                    
                     <!--관심사-->
-                    <div class="user-like">
-                        <legend class="blind">당신의 관심사를 선택해주세요<span class="dupli-info">중복선택가능</span></legend>
-                        <div class="btns-area">
-                            <input type="checkbox" name="userLike" id="userLike01" value="1"><label for="userLike01">인권</label>
-                            <input type="checkbox" name="userLike" id="userLike02" value="2"><label for="userLike02">정보</label>
-                            <input type="checkbox" name="userLike" id="userLike03" value="3"><label for="userLike03">공부</label>
-                            <input type="checkbox" name="userLike" id="userLike04" value="4"><label for="userLike04">진로</label>
-                            <input type="checkbox" name="userLike" id="userLike05" value="5"><label for="userLike05">감정</label>
-                            <input type="checkbox" name="userLike" id="userLike06" value="6"><label for="userLike06">여가</label>
-                            <input type="checkbox" name="userLike" id="userLike07" value="7"><label for="userLike07">일탈</label>
-                            <input type="checkbox" name="userLike" id="userLike08" value="8"><label for="userLike08">가정</label>
-                            <input type="checkbox" name="userLike" id="userLike09" value="9"><label for="userLike09">친구</label>
-                            <input type="checkbox" name="userLike" id="userLike10" value="10"><label for="userLike10">이성</label>
+                    <div class="off">
+                        <h3>당신의 관심사를 선택해주세요<span class="dupli-info">(중복선택가능)</span></h3>
+                        <div class="off">
+                            <button type="button" name="userLike" value="1">인권</button>
+                            <button type="button" name="userLike" value="2">정보</button>
+                            <button type="button" name="userLike" value="3">공부</button>
+                            <button type="button" name="userLike" value="4">진로</button>
+                            <button type="button" name="userLike" value="5">감정</button>
+                            <button type="button" name="userLike" value="6">여가</button>
+                            <button type="button" name="userLike" value="7">일탈</button>
+                            <button type="button" name="userLike" value="8">가정</button>
+                            <button type="button" name="userLike" value="9">친구</button>
+                            <button type="button" name="userLike" value="10">이성</button>
                         </div>
+                    
                     </div>
                     <!--관심분야-->
-                    <div>
-                        <legend class="blind">당신의 관심분야를 선택해주세요<span class="dupli-info">중복선택가능</span></legend>
+                    <div class="off">
+                        <h3>당신의 관심분야를 선택해주세요<span class="dupli-info">(중복선택가능)</span></h3>
                         <div class="btns-area">
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="1"><label for="userLikeField01">소설</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="2"><label for="userLikeField01">에세이/시/희곡</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="3"><label for="userLikeField01">인문</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="4"><label for="userLikeField01">자기계발</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="5"><label for="userLikeField01">경제/경영</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="6"><label for="userLikeField01">가정/취미/실용</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="7"><label for="userLikeField01">의학/건강</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="8"><label for="userLikeField01">여행/지리</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="9"><label for="userLikeField01">과학/기술</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="10"><label for="userLikeField01">사회과학</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="11"><label for="userLikeField01">종교</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="12"><label for="userLikeField01">역사/문학</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="13"><label for="userLikeField01">인물/평전</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="14"><label for="userLikeField01">예술/대중문화</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="15"><label for="userLikeField01">외국어</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="16"><label for="userLikeField01">컴퓨터</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="17"><label for="userLikeField01">만화</label>
-                            <input type="checkbox" name="userLikeField" id="userLikeField01" value="18"><label for="userLikeField01">청소년</label>
+                            <button type="button" name="userLikeField" value="1">소설</button>
+                            <button type="button" name="userLikeField" value="2">에세이/시/희곡</button>
+                            <button type="button" name="userLikeField" value="3">인문</button>
+                            <button type="button" name="userLikeField" value="4">자기계발</button>
+                            <button type="button" name="userLikeField" value="5">경제/경영</button>
+                            <button type="button" name="userLikeField" value="6">가정/취미/실용</button>
+                            <button type="button" name="userLikeField" value="7">의학/건강</button>
+                            <button type="button" name="userLikeField" value="8">여행/지리</button>
+                            <button type="button" name="userLikeField" value="9">과학/기술</button>
+                            <button type="button" name="userLikeField" value="10">사회과학</button>
+                            <button type="button" name="userLikeField" value="11">종교</button>
+                            <button type="button" name="userLikeField" value="12">역사/문학</button>
+                            <button type="button" name="userLikeField" value="13">인물/평전</button>
+                            <button type="button" name="userLikeField" value="14">예술/대중문화</button>
+                            <button type="button" name="userLikeField" value="15">외국어</button>
+                            <button type="button" name="userLikeField" value="16">컴퓨터</button>
+                            <button type="button" name="userLikeField" value="17">만화</button>
+                            <button type="button" name="userLikeField" value="18">청소년</button>
                         </div>
+                        
                     </div>
-                    <div>
+                    <div class="user-books off">
                         <!-- <h3 class="blind">당신의 관심도서를 선택해주세요</h3> -->
                         <p><span class="select-val">당신의 관심도서를 3개 선택해주세요</span></p>
                         <!--관심도서 3개--><!--선택은 스크립트로 제어-->
@@ -133,8 +143,9 @@
                                 <li>책1</li>
                                 <li>책1</li>
                             </ul>
+                            
                     </div>
-                    <div>
+                    <div class="ai-pick-final off">
                         <!-- <h3 class="blind">당신의 관심도서를 선택해주세요</h3> -->
                         <p><span class="select-val">당신을 위한 인공지능 추천도서입니다</span></p>
                         <!--고르는 구간-->
@@ -147,10 +158,11 @@
                                 <li>책1</li>
                                 <li>책1</li>
                             </ul>
+                        
                     </div>
                     <!--포지션으로 띄우는 버튼들-->
-                    <div class="select-process-btns on">
-                        <button class="prev-btn">이전단계</button><!--1단계 일땐 가리기-->
+                    <div class="select-process-btns">
+                        <button class="prev-btn">이전단계</button>
                         <button class="next-btn">다음단계</button>
                         <button class="result-btn">결과보기</button>
                         <!--마지막 단계 시 나타나는 버튼 - 초기화 -->

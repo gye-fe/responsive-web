@@ -104,11 +104,21 @@ const data = [
 ];
 //전역변수구간
 const contentsArea = document.querySelector(".user-select-area");//본문
+const processInfo = document.querySelectorAll("#main .process-info li span");
+const stepTit = contentsArea.querySelector(".tit");
+const stepInfo = contentsArea.querySelector(".dupli-info")
+const stepArea = contentsArea.querySelector(".step-area")
+const BtnArea = contentsArea.querySelector(".step-area .btns-area");
+const userBooksArea = contentsArea.querySelector(".user-books"); //관심도서 3개구간
+const resultArea = contentsArea.querySelector(".ai-pick-final");//결과 구간
 const processBtns = document.querySelector(".select-process-btns");//행동버튼
 const nextBtn = processBtns.querySelector(".next-btn");
-const BtnArea = contentsArea.querySelector(".user-test .btns-area");
 const prevBtn =  processBtns.querySelector(".prev-btn");
-/**/
+const resetBtn = processBtns.querySelector(".reset");
+
+
+
+
 //로직 구간 ,함수작성부분
 renderUserAge()
 
@@ -118,85 +128,124 @@ function renderUserAge(){
   for (let i = 0; i < data.length; i++){
       html += `<button data-age="${data[i].age}">${data[i].age}</button>`;
   }
-  contentsArea.querySelector(".user-test .btns-area").innerHTML = html;
-  contentsArea.querySelector("h3").textContent = "당신의 연령대를 선택해주세요"
-  ""
+  BtnArea.innerHTML = html;
+  stepTit.textContent = "당신의 연령대를 선택해주세요";
+  stepInfo.textContent = "";
 }
 /*관심사 출력 함수*/ 
-function renderBtnArea(userageSel){
+function renderUserLike(userageSel){
     let html ="";
     for (let i = 0; i < userageSel.categories.length; i++){
-    html += `<button data-age="${data[i].age}">${userageSel.categories[i]}</button>`}
-  contentsArea.querySelector(".user-test .btns-area").innerHTML = html;
-  contentsArea.querySelector("h3").textContent = "당신의 관심사를 선택해주세요(중복선택가능)"
+    html += `<button>${userageSel.categories[i]}</button>`}
+  BtnArea.innerHTML = html;
+  stepTit.textContent = "당신의 관심사를 선택해주세요";
+  stepInfo.textContent = "(중복선택가능)";
 }
 /*관심분야 출력 함수*/ 
-function renderUserLike(userSel){
-    let html ="";
-    for (let i = 0; i < userSel.types.length; i++){
-    html += `<button>${userSel.types[i]}</button>`}
-  contentsArea.querySelector(".user-test .btns-area").innerHTML = html;
-  contentsArea.querySelector("h3").textContent = "당신의 관심분야를 선택해주세요(중복선택가능)"
-
+function renderUserField(userageSel){
+    let html = "";
+    for (let i = 0; i < userageSel.types.length; i++){
+    html += `<button>${userageSel.types[i]}</button>`}
+  BtnArea.innerHTML = html;
+  stepTit.textContent = "당신의 관심분야를 선택해주세요";
+  stepInfo.textContent = "(중복선택가능)";
 }
 
+//버튼 컨트롤 함수
+function btnControl(){
+  if(stepNum === 1){
+    prevBtn.style.display = "none";
+    resultArea.classList.add("off");
+    stepArea.classList.remove("off");
+    nextBtn.style.display = "block";
+    resetBtn.style.display ="none";
+    nextBtn.textContent ="다음단계";
+  }
+  if(stepNum === 3){
+    stepArea.classList.remove("off");
+    userBooksArea.classList.add('off');
+    nextBtn.textContent ="다음단계"
+  }else if(stepNum === 4){
+    userBooksArea.classList.remove('off');
+    stepArea.classList.add("off");
+    resultArea.classList.add("off");
+    nextBtn.textContent ="결과보기"
+  }else if(stepNum === 5){
+    resultArea.classList.remove("off");
+    userBooksArea.classList.add("off");
+    nextBtn.style.display = "none";
+    prevBtn.style.display = "none";
+    resetBtn.style.display ="block";
+  }
+}
+//스탭 움직이는 함수
+function updatestepInfo(){
+  processInfo.forEach(function(li){
+    li.classList.remove("on");
+  });
+  processInfo[stepNum - 1].classList.add("on");
+}
+//출력 함수를 제어하는 함수
+function stepRender(){
+  if(stepNum === 1){
+    renderUserAge();
+  }
+  else if(stepNum === 2){
+    renderUserLike(userageSel);
+    prevBtn.style.display = "block";
+  }else{
+    renderUserField(userageSel);
+  }
+  
+}
 
 /*버튼 클릭 발생*/
 let stepNum = 1;
-let userselected = "";
-let userageSel = null;
-let userSelCategory = null;
+let userselected = "";//전역에 쓸 버튼데이터 저장 용도
+let userageSel = null; //출력 함수에 쓸 데이터 저장
 BtnArea.addEventListener("click", function(e){
   if(e.target.tagName === "BUTTON"){
-    userselected = e.target.dataset.age; //전역에 쓸 저장용도
-    if(stepNum < 1){
+    userselected = e.target.dataset.age; //버튼안의 데이터아이디 저장
+    for (let i = 0; i < data.length; i++) {
+        if(userselected === data[i].age){
+          userageSel = data[i];//출력함수에 쓸 데이터 저장
+        }
+      }
+    //1단계만 라디오버튼속성 2단계는 체크박스 속성
+    if(stepNum === 1){
       BtnArea.querySelectorAll("button").forEach(function(b){
       b.classList.remove("on");
     });
     e.target.classList.add("on");
+      
     }else{
       e.target.classList.toggle("on");
-    }
-    
-    nextBtn.classList.add("on");
-    
 
-    for (let i = 0; i < data.length; i++) {
-      if(userselected === data[i].age){
-        userageSel = data[i];
-      }
     }
-    for(let i = 0; i < data.length; i++){
-      if(userSelCategory === data[i].categories){
-        userSelCategory = data[i];
-      }
-    }
+    nextBtn.classList.add("on");/*다음 버튼 on*/  
   }
 
 });
-
-
+//다음버튼
 nextBtn.addEventListener("click",()=>{
   stepNum++
-  if(stepNum === 1){
-    renderBtnArea(userageSel)
-  }
-  else if(stepNum === 2){
-    renderUserLike(userSel)
-  }
-  if(stepNum < 1){
-    prevBtn.style.display = "none";
-  }else{
-    prevBtn.style.display = "block";
-  }
-console.log(stepNum)
+  stepRender();
+  btnControl();
+  updatestepInfo();
+  console.log(stepNum)//확인용
 });
+
+//이전버튼
 prevBtn.addEventListener("click",()=>{
   stepNum--
-  if(stepNum === 1){
-    renderBtnArea(userSel)
-  }
-  else if(stepNum === 2){
-    renderUserLike(userSel)
-  }
+  stepRender();
+  btnControl();
+  updatestepInfo();
+})
+//리셋버튼
+resetBtn.addEventListener("click",()=>{
+  stepNum = 1;
+  stepRender();
+  btnControl();
+  updatestepInfo();
 })

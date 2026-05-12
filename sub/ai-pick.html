@@ -63,114 +63,204 @@
                 <div class="user-select-area">
                     <!--1~3번째 부분-->
                     <!--스크립트 시험용 지울예정-->
-                    <div class="user-test">
-                        <h3>테스트</h3>
+                    <div class="step-area">
+                        <h3>
+                            <span class="tit"></span>
+                            <span class="dupli-info"></span>
+                        </h3>
                         <div class="btns-area">
                         </div>
                     </div>
-                    <!--userAge-->
-                    <div class="off"><!--3개 선택한 미리보기 부분 자식 3개 div 넣어야함 평소 가리기--><!--4 관심도서 부분-->
-                        <h3>당신의 연령대를 선택해주세요</h3>
-                        <div class="btns-area">
-                            <button data-age="유아">유아</button>
-                            <button data-age="초등학생">초등학생</button>
-                            <button data-age="중학생">중학생</button>
-                            <button data-age="고등학생">고등학생</button>
-                            <button data-age="20대">20대</button>
-                            <button data-age="30대">30대</button>
-                            <button data-age="40대">40대</button>
-                            <button data-age="50대">50대</button>
-                            <button data-age="60대 이상">60대 이상</button>     
-                        </div>
-                        
-                    </div>
-                    
-                    <!--관심사-->
-                    <div class="off">
-                        <h3>당신의 관심사를 선택해주세요<span class="dupli-info">(중복선택가능)</span></h3>
-                        <div class="off">
-                            <button type="button" name="userLike" value="1">인권</button>
-                            <button type="button" name="userLike" value="2">정보</button>
-                            <button type="button" name="userLike" value="3">공부</button>
-                            <button type="button" name="userLike" value="4">진로</button>
-                            <button type="button" name="userLike" value="5">감정</button>
-                            <button type="button" name="userLike" value="6">여가</button>
-                            <button type="button" name="userLike" value="7">일탈</button>
-                            <button type="button" name="userLike" value="8">가정</button>
-                            <button type="button" name="userLike" value="9">친구</button>
-                            <button type="button" name="userLike" value="10">이성</button>
-                        </div>
-                    
-                    </div>
-                    <!--관심분야-->
-                    <div class="off">
-                        <h3>당신의 관심분야를 선택해주세요<span class="dupli-info">(중복선택가능)</span></h3>
-                        <div class="btns-area">
-                            <button type="button" name="userLikeField" value="1">소설</button>
-                            <button type="button" name="userLikeField" value="2">에세이/시/희곡</button>
-                            <button type="button" name="userLikeField" value="3">인문</button>
-                            <button type="button" name="userLikeField" value="4">자기계발</button>
-                            <button type="button" name="userLikeField" value="5">경제/경영</button>
-                            <button type="button" name="userLikeField" value="6">가정/취미/실용</button>
-                            <button type="button" name="userLikeField" value="7">의학/건강</button>
-                            <button type="button" name="userLikeField" value="8">여행/지리</button>
-                            <button type="button" name="userLikeField" value="9">과학/기술</button>
-                            <button type="button" name="userLikeField" value="10">사회과학</button>
-                            <button type="button" name="userLikeField" value="11">종교</button>
-                            <button type="button" name="userLikeField" value="12">역사/문학</button>
-                            <button type="button" name="userLikeField" value="13">인물/평전</button>
-                            <button type="button" name="userLikeField" value="14">예술/대중문화</button>
-                            <button type="button" name="userLikeField" value="15">외국어</button>
-                            <button type="button" name="userLikeField" value="16">컴퓨터</button>
-                            <button type="button" name="userLikeField" value="17">만화</button>
-                            <button type="button" name="userLikeField" value="18">청소년</button>
-                        </div>
-                        
-                    </div>
+                    <!--/step-area-->
                     <div class="user-books off">
-                        <!-- <h3 class="blind">당신의 관심도서를 선택해주세요</h3> -->
-                        <p><span class="select-val">당신의 관심도서를 3개 선택해주세요</span></p>
-                        <!--관심도서 3개--><!--선택은 스크립트로 제어-->
-                        <p><!--3개 선택할 위치-->
-                        </p>
+                        <h3>당신의 관심도서를 3개 선택해주세요</h3>
+                            <ul class="user-pick-area">
+                                <li class="card-item">
+                                    <div class="img-box">이미지</div>
+                                </li>
+                                <li class="card-item">
+                                    <div class="img-box">이미지</div>
+                                </li>
+                                <li class="card-item">
+                                    <div class="img-box">이미지</div>
+                                </li>
+                            </ul>
                         <!--고르는 구간-->
                             <ul class="ai-pick-list"><!--1~20개--><!--호버 디자인 li안에 div 넣고 포지션 처리함 논 기본값 블록으로 js로온오프 조절-->
-                                <li value="1">책1</li>
-                                <li>책2</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="book-tit">카드 제목</p>
+                                            <p class="book-desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
-                            
                     </div>
                     <div class="ai-pick-final off">
-                        <!-- <h3 class="blind">당신의 관심도서를 선택해주세요</h3> -->
-                        <p><span class="select-val">당신을 위한 인공지능 추천도서입니다</span></p>
-                        <!--고르는 구간-->
-                            <ul class="ai-pick-list"><!--1~20개--><!--호버 디자인 없음 링크 걸려있음-->
-                                <li value="1">책1</li>
-                                <li>책2</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
-                                <li>책1</li>
+                        <h3>당신을 위한 인공지능 추천도서입니다.</h3>
+                            <ul class="ai-pick-list"><!--1~20개--><!--호버 디자인 li안에 div 넣고 포지션 처리함 논 기본값 블록으로 js로온오프 조절-->
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="book-tit">카드 제목</p>
+                                            <p class="book-desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card-item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            이미지
+                                        </div>
+                                        <div class="info-box">
+                                            <p class="tit">카드 제목</p>
+                                            <p class="desc">
+                                                호버 시 보여질 설명 내용입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
-                        
                     </div>
                     <!--포지션으로 띄우는 버튼들-->
                     <div class="select-process-btns">
                         <button class="prev-btn">이전단계</button>
                         <button class="next-btn">다음단계</button>
-                        <button class="result-btn">결과보기</button>
                         <!--마지막 단계 시 나타나는 버튼 - 초기화 -->
                         <button class="reset">다시추천받기</button>
                     </div>
                 </div><!--/user-select-area-->
             </div><!--contents-->
-            <!--결과 값 공간 평소엔 가리고 결과 나올때 나타내기 js로 관리-->
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 

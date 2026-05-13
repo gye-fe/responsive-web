@@ -46,7 +46,6 @@ br {display: none;}
 
 /*pc로 바뀔때 버튼이 앱솔루트화됨*/
 
-/*임시로 넣은거 div2~4가림*/
 #main .contents .user-select-area {
     padding-top: 20px;
     position: relative;

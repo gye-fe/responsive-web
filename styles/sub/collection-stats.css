@@ -23,10 +23,12 @@ th, td { padding: 10px 5px;}
 }
 .chart tbody tr:last-child { border-bottom: 1px solid #555;;}
 #main .contents .grape-area {
-    width: 300px;
-    height: 300px;
-    background-color: #e1e1e1;
+    width: 100%;
     margin: 0 auto;
+}
+#main .contents .grape-area canvas {
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 #main .contents .cap-box {
@@ -53,7 +55,9 @@ th, td { padding: 10px 5px;}
     }
 }
 @media screen and (min-width:768px){ /*태블릿 최소*/
-
+    #main .contents .grape-area {
+        margin-right: 16px;
+    }
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
     #main .contents .chart-list .chart-box {

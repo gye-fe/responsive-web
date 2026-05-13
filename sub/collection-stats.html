@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/sub/collection-stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../scripts/sub/collection-stats.js" defer></script>
+    
 </head>
 <body>
     <div class="container inner">
@@ -27,7 +29,7 @@
                 </dl>
                 <dl class="active">
                     <dt>도서관현황</dt>
-                    <dd>자료현황</dd>
+                    <dd class="on">자료현황</dd>
                     <dd>시설현황</dd>
                     <dd>층별안내</dd>
                     <dd>360도 투어</dd>
@@ -62,7 +64,9 @@
                         <h2 class="blind">도서 자료 이용 현황 차트</h2>
                         <!--그래프 공간-->
                         <div class="chart-box">
-                            <div class="grape-area"></div>
+                            <div class="grape-area">
+                                <canvas class="book-chart"></canvas>
+                            </div>
                             <!--표 공간-->
                             <table class="chart">
                                 <caption>
@@ -88,15 +92,15 @@
                                     </tr>
                                     <tr>
                                         <th>참고</th>
-                                        <td>259,422</td>
+                                        <td>2457</td>
                                     </tr>
                                     <tr>
                                         <th>원서</th>
-                                        <td>2457</td>
+                                        <td>15,364</td>
                                     </tr>
                                     <tr>
                                         <th>점자</th>
-                                        <td>2457</td>
+                                        <td>112</td>
                                     </tr>
                                 </tbody>
                             </table><!--/도서-->
@@ -106,7 +110,9 @@
                         <h2 class="blind">비도서 자료 이용 현황 차트</h2>
                         <div class="chart-box">
                             <!--그래프 공간-->
-                            <div class="grape-area"></div>
+                            <div class="grape-area">
+                                <canvas class="non-book-chart"></canvas>
+                            </div>
                             <!--표 공간-->
                             <table class="chart">
                                 <caption>
@@ -134,7 +140,9 @@
                         <h2 class="blind">정기간행물 이용 현황 차트</h2>
                         <div class="chart-box">
                             <!--그래프 공간-->
-                            <div class="grape-area"></div>
+                            <div class="grape-area">
+                                <canvas class="periodical-chart"></canvas>
+                            </div>
                             <!--표 공간-->
                             <table class="chart">
                                 <caption>

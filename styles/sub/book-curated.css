@@ -1,47 +1,57 @@
-
 /*검색창*/
-
 .contents .base-form {
     border: 0 none;
     margin-bottom: 20px;
     padding: 15px;
     background-color: #f7f7f7;
 }
-.contents .base-form .search {
+.contents .base-form .search-bottom {
     display: flex;
     gap: 4px;
     margin-top: 5px;
 }
-.test01 ul {
-    width: 100%;
+.search-top,
+.search-bottom {
+    min-height: 50px;
+    position: relative;
 }
-.search .test02 {
-    width: 80px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.contents .base-form ul {
+.search-top { z-index: 50;}
+.search-library { width: 100%;}
+.search-tit { min-width: 80px;}
+.contents .base-form .search-library,
+.contents .base-form .search-tit {
+    position: absolute; 
+    top: 0;
+    left: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     flex-shrink: 0;
+    border-bottom: 0 none;
+}
+.base-form .search-library.open,
+.base-form .search-tit.open {
+    z-index: 100;
+}
+.search .search-bottom {
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .contents .base-form li {
     display: none;
+    width: 100%;
     padding: 10px 15px;
-    border-top: 1px solid #e2e2e2;
-}
-.contents .base-form li:first-child {
     border-top: 0 none;
+    cursor: pointer;
 }
 .contents .base-form li.show {
     display: block;
+    border-bottom: 1px solid #ccc;
 }
 
 .contents .base-form input {
     background-color: #fff;
+    margin-left: 84px;
 }
 
 .contents .base-form button {
@@ -133,11 +143,11 @@
         align-items: center;
         margin: 0 auto;
     }
-    .contents .base-form div {
-        width: 130px;
+    .contents .base-form .search-top {
+        width: calc(20% - 4px);
     }
-    #main .contents .base-form .search {
-        flex: 1;
+    #main .contents .base-form .search-bottom {
+        width: calc(80% - 4px);
         margin: 0;
     }
     .contents .base-form button {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/sub/book-curated.css">
+    <script src="../scripts/common.js" defer></script>
     <script src="../scripts/sub/book-curated.js" defer></script>
 </head>
 <body>
@@ -51,10 +52,10 @@
                     <form>
                         <fieldset>
                             <legend class="blind">기증신청조회 검색</legend>
-                            <div class="test01">
+                            <div class="search-top">
                                 <label for="libraryCh" class="blind">조회할 도서관 선택</label>
-                                <ul name="libraryCh" id="libraryCh">
-                                    <li class="show active">전체</li>
+                                <ul name="libraryCh" class="search-library" >
+                                    <li class="show">전체</li>
                                     <li>공통</li>
                                     <li>용인중앙도서관</li>
                                     <li>구갈희망누리도서관</li>
@@ -78,14 +79,14 @@
                                     <li>흥덕도서관</li>
                                 </ul>
                             </div>
-                            <div class="search">
-                                <ul class="test02">
+                            <div class="search-bottom">
+                                <ul class="search-tit">
                                     <li class="show">제목</li>
                                     <li>내용</li>
                                 </ul>
                                 <label for="userName" class="blind">조회할 신청자명 기입</label>
-                                <input type="text" name="userName" id="userName">
-                                <button>검색</button>
+                                <input type="text" name="userName" id="userName" class="search-txt">
+                                <button class="search-btn">검색</button>
                             </div>
                         </fieldset>
                     </form>

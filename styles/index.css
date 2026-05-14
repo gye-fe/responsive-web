@@ -2,7 +2,8 @@
 #main {
     width: 100%;
 }
-*::-webkit-scrollbar { /*스크롤바 숨기기*/
+/*스크롤바 숨기기*/
+*::-webkit-scrollbar { 
   display: none;
 }
 #main .sec-area {
@@ -58,6 +59,7 @@
 .list-wrap {
     overflow: hidden;
     overflow-x: auto;
+    padding-bottom: 16px;
 }
 
 .banner-list {
@@ -266,15 +268,15 @@
 
 /*도서관 소식 - 공지사항*/
 
-.feature-area li {
+.notice .feature-area li {
     display: flex;
     margin-bottom: 15px;
     justify-content:start;
 }
-.feature-area li:last-child {
+.notice .feature-area li:last-child {
     margin: 0;
 }
-.feature-area li span {
+.notice .feature-area li span {
     height: 100%;
     padding: 10px;
     text-align: center;
@@ -283,21 +285,41 @@
     border: 1px solid #333;
     font-size: 1em;
 }
-.feature-area li .sj {
+.notice .feature-area li .sj {
     color: #FFF;
     background-color: #1b6eab;
     border: 1px solid #1b6eab;
 }
-.feature-area li dl {
+.notice .feature-area li dl {
     min-width: 0;
     
 }
-.feature-area dt {
+.notice .feature-area dt {
     white-space: nowrap; /* 줄바꿈 넘어가지 않게 /한 줄로 */
     overflow: hidden;  /* 넘친 부분 화면에 표시 x */
     text-overflow: ellipsis; /* 넘친 부분 ...으로 표현 */
 }
-.feature-area li dd {
+.notice .feature-area dt a {
+    font-size: 1em;
+    position: relative;
+}
+
+.notice .feature-area dt a:hover {
+    text-decoration-color: transparent;
+}
+.notice .feature-area dt a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #222;
+    height: 2px;
+    width: 0%;
+    transition: 0.7s;
+}
+.notice .feature-area dt a:hover::before {
+    width: 100%;
+}
+.notice .feature-area li dd {
     font-size: 14px;
     color: #646464;
 }
@@ -352,38 +374,56 @@
 
 
 /*도서관 아카이브*/
-
+.archive-banner .sel-wrapper {
+    position: relative;
+}
 .sel-box {
+    position: absolute; 
+    top: 0;
+    left: 0;
     width: 200px;
     border-radius: 30px;
     border: 1px solid #ddd;
     text-align: start;
     padding: 5px 20px 5px 15px;
+    background-color: #FFF;
+}
+.sel-box.open {
+    z-index: 100;
+    border-radius: 20px;
 }
 .sel-box li {
     display: none;
     width: 100%;
-    height: 100%;
+    cursor: pointer;
 }
 .sel-box li.on {
     display: block;
 }
+.archive-banner .banner-list {
+    padding-top: 48px; /*윗줄 ul때문에*/
+}
 
-.banner-list li {
+.archive-banner  .banner-list li {
     flex-shrink: 0;
     width: 250px;
     margin-right: 10px;
     border: 1px solid #ddd; /*임시*/
 }
-.banner-list li div {
+.archive-banner  .banner-list li .img-box {
     width: 100%;
     height: 150px;
     background-color: #eee; /*임시*/
 }
-.card-ui dl {
+.archive-banner  .banner-list li .img-box:hover{
+    background-color: #1b30ff; /*임시*/
+    transform: scale(1);
+    transition: transform 0.8s ease;
+}
+.archive-banner .card-ui dl {
     padding: 5px 10px 30px;
 }
-.card-ui dt {
+.archive-banner .card-ui dt {
     display: block;
     margin-top: 15px;
     font-size: 14px;
@@ -391,11 +431,12 @@
     overflow-wrap: break-word;
 
 }
-.card-ui dd {
+.archive-banner  .card-ui dd {
     margin-top: 10px;
     color: #646464;
 }
-/*문화 행사*/
+
+/*문화행사*/
 
 .event-box { /*li*/
     width: 235px;

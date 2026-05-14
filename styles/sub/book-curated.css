@@ -18,6 +18,7 @@
 .search-top { z-index: 50;}
 .search-library { width: 100%;}
 .search-tit { min-width: 80px;}
+
 .contents .base-form .search-library,
 .contents .base-form .search-tit {
     position: absolute; 

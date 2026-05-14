@@ -11,7 +11,6 @@
 .detail-box .month {
     display: flex;
     padding: 10px;
-    
 }
 .detail-box .month p {
     line-height: 36px;
@@ -25,21 +24,34 @@
     aspect-ratio: 1 / 1;
     padding: 4px 8px;
     border: 1px solid #e2e2e2;
+    border-radius: 0;
 }
-.detail-box .month span {
+.detail-box .month button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contents .detail-box .month .today-card {
     margin-left: 10px;
     padding: 4px 8px;
     border: 1px solid #e2e2e2;
+    background-color: #f7f7f7;
 }
 .detail-box .schedule-info {
     display: flex;
-    gap:10px;
+    gap:8px;
+    padding: 16px 24px;
 }
 .detail-box .schedule-info li {
-    padding-left: 20px;
-    font-size: 1em;
+    font-size: 12px
 }
-
+.detail-box .schedule-info li span {
+    margin-right: 4px;
+    width: 30px;
+    padding: 1px 4px;
+    border-radius: 50%;
+    color: #fff;
+}
 /*contents 구간*/
 table { border-top: 2px solid #222;}
 tbody tr:last-child th, tbody tr:last-child td{
@@ -48,7 +60,9 @@ tbody tr:last-child th, tbody tr:last-child td{
 .calendar .blank {
     background-color: #f0f0f0;
 }
-
+.calendar .hide { /*6웓 달력*/
+    display: none;
+}
 .calendar table,
 .cal-info table 
 {
@@ -79,14 +93,24 @@ tbody tr:last-child th, tbody tr:last-child td{
     border-right: 0 none;
 }
 
-.calendar td span {
+.calendar span {
     margin-left: 2px;
     padding: 1px 4px;
     border-radius: 50px;
     color: #fff;
+}
+.contents .icon-holiday {
     background-color: #76C7FF;
 }
-.calendar td span.today {
+.contents .icon-event {
+    background-color: #ff6300;
+}
+.contents .icon-makerspace {
+    background-color: #ffb400;
+}
+
+
+.calendar td .icon-today {
     padding: 1px 5px;
     background-color: #444;
 }
@@ -144,6 +168,9 @@ tbody tr:last-child th, tbody tr:last-child td{
     .cal-info tr th:first-child {
         padding: 15px 5px;
     }
+    .detail-box .schedule-info li {
+        font-size: 16px;
+    }
     
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
@@ -151,6 +178,9 @@ tbody tr:last-child th, tbody tr:last-child td{
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 30px;
+    }
+    .detail-box .schedule-info li {
+        font-size: 18px;
     }
     .calendar td {
         height: 160px;

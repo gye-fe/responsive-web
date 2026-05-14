@@ -21,13 +21,14 @@ th, td { padding: 10px 5px;}
     gap:5px;
     padding: 30px 15px;
 }
-.chart tbody tr:last-child { border-bottom: 1px solid #555;;}
-#main .contents .grape-area {
-    width: 100%;
-    margin: 0 auto;
-}
+/* .chart tbody { border-bottom: 1px solid #555;} */
+#main .contents .grape-area,
+#main .contents .chrt
+{width: 100%;
+margin: 0 auto;}
+    
+
 #main .contents .grape-area canvas {
-    width: 100%;
     aspect-ratio: 1 / 1;
 }
 
@@ -41,7 +42,11 @@ th, td { padding: 10px 5px;}
 }
 .chart th {
     border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
     width: 70px;
+}
+.chart tbody tr:last-child {
+    border-bottom: 1px solid #ababab;
 }
 
 /*반응형 구간*/
@@ -62,5 +67,8 @@ th, td { padding: 10px 5px;}
 @media screen and (min-width:1024px){ /*pc 최소*/
     #main .contents .chart-list .chart-box {
         flex-direction: row;
+    }
+    #main .contents .chart-list .chart-box .grape-area {
+        width: calc(50% - 5px);
     }
 }

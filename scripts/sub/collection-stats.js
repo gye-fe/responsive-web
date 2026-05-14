@@ -15,10 +15,10 @@ const bookData = {
   datasets: [{
     data: [165573, 75916, 2457, 15364, 112],
     backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)',
-      'rgb(255,100,20)',
+      '#60B329',
+      '#FFC000',
+      '#5A9BD3',
+      '#4372C4',
       'rgb(255,50,120)',
     ],
     borderColor:'rgb(233,233,233)',
@@ -33,7 +33,7 @@ const nonBookData = {
   datasets: [{
     data: [3689],
     backgroundColor: [
-      'rgb(255, 99, 132)',
+      '#522609',
     ],
     borderColor:'rgb(233,233,233)',
     // hoverOffset: 2
@@ -48,8 +48,8 @@ const periodicalData = {
   datasets: [{
     data: [76, 10],
     backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
+      '#B53050',
+      '#F1F96F',
     ],
     borderColor:'rgb(233, 233, 233)',
     hoverOffset: 2

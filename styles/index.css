@@ -431,11 +431,15 @@
     padding-top: 48px; /*윗줄 ul때문에*/
 }
 
-.archive-banner  .banner-list li {
+.archive-banner  .banner-list .card-ui {
     flex-shrink: 0;
     width: 250px;
     margin-right: 10px;
     border: 1px solid #ddd; /*임시*/
+    transition: .3s;
+}
+.archive-banner  .banner-list .card-ui:hover{
+    transform: translateY(-12px);
 }
 .archive-banner  .banner-list li .img-box {
     width: 100%;

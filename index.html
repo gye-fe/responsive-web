@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 | 수지도서관</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="scripts/index.js" defer></script><!--스크립트 임시 배치-->
 </head>
 <body>
 <div class="container inner">
         <section id="main">
+            <!-- <div class="pop-up show">
+                <div class="swiper mySwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="#" alt="이미지 준비중"></li>
+                        <li class="swiper-slide"><img src="#" alt="이미지 준비중"></li>
+                    </ul>
+                </div>
+            </div> -->
             <div class="sec-area main-cont">  <!-- 메인 섹션 -->
                 <div class="introduce">
                     <p>시민 행복과 미래를 이끄는</p>
@@ -279,8 +289,8 @@
                             </table>
                         </div>
                     </div>
-                </div><!--/도서관 이용안내-->
-                <!--도서관 아카이브-->
+                </div><!--/도서관이용안내-->
+                <!--도서관아카이브-->
                 <div class="sec-area archive-banner">
                     <div class="tit-wrap">
                         <div class="tit-box">
@@ -300,30 +310,30 @@
                             </ul>
                         </div>
                     </div><!--banner-wrap-->
-                    <div class="list-wrap">
-                        <ul class="banner-list">
-                            <li class="card-ui">
+                    <div class="list-wrap swiper mySwiper">
+                        <ul class="banner-list swiper-wrapper">
+                            <li class="card-ui swiper-slide">
                                 <div class="img-box">이미지</div>
                                 <dl>
                                     <dt>[모현] 지구를 위한 작은 실천, 모현도서관에서 함께 해요!</dt>
                                     <dd>2026.05.06</dd>
                                 </dl>
                             </li>
-                            <li class="card-ui">
+                            <li class="card-ui swiper-slide">
                                 <div class="img-box">이미지</div>
                                 <dl>
                                     <dt>재외동포, 어디까지 알고 계신가요? : 서농도서관 찾아가는 재외동포 이해교육</dt>
                                     <dd>2026.05.04</dd>
                                 </dl>
                             </li>
-                            <li class="card-ui">
+                            <li class="card-ui swiper-slide">
                                 <div class="img-box">이미지</div>
                                 <dl>
                                     <dt>[상현] 참여 ON! 도서관 UP! 시민이 함께 만드는 그린라이브러리</dt>
                                     <dd>2026.04.29</dd>
                                 </dl>
                             </li>
-                            <li class="card-ui">
+                            <li class="card-ui swiper-slide">
                                 <div class="img-box">이미지</div>
                                 <dl>
                                     <dt>작가와 함께 맛보는 쫄깃쫄깃 호랭떡집 이야기</dt>
@@ -331,8 +341,12 @@
                                 </dl>
                             </li>
                         </ul>
+                        <div class="btn-wrapper">
+                            <button class="swiper-button-prev more"><img src="images/icon/prev.png" alt="이전배너보기"></button>
+                            <button class="swiper-button-next more"><img src="images/icon/next.png" alt="다음배너보기"></button>
+                        </div>
                     </div>
-                </div><!--/도서관 아카이브-->
+                </div><!--/도서관아카이브-->
             </div>
                 <!--문화 행사-->
                 <div class="sec-area culture-banner">
@@ -344,9 +358,9 @@
                         <button class="active">문화행사</button>
                         <button>방학특강</button>  
                     </div>    
-                    <div class="list-wrap">
-                        <div class="banner-list"><!--ul-->
-                            <div class="event-box">
+                    <div class="list-wrap swiper cult-banner">
+                        <div class="banner-list swiper-wrapper"><!--ul-->
+                            <div class="event-box swiper-slide">
                                 <span class="sj">수지</span>
                                 <span class="ing">접수중</span>
                                 <p class="event-title">수지도서관X경희대 메이커 AI·SW교육 「핑퐁 로봇」
@@ -358,7 +372,7 @@
                                     <p class="survey-participant"><span>신청 : 10/15</span><span class="stand-by">대기 : 0/10</span></p>
                                 </div><!--item-info-->
                             </div>
-                            <div class="event-box">
+                            <div class="event-box swiper-slide">
                                 <span class="sj">수지</span>
                                 <span class="ing">접수중</span>
                                 <p class="event-title">수지도서관X경희대 메이커 AI ·SW교육 「로봇대회 체험반」
@@ -370,7 +384,7 @@
                                     <p class="survey-participant"><span>신청 : 13/18</span><span class="stand-by">대기 : 0/10</span></p>
                                 </div><!--item-info-->
                             </div>
-                            <div class="event-box">
+                            <div class="event-box swiper-slide">
                                 <span class="sj">수지</span>
                                 <span class="pending">대기중</span>
                                 <p class="event-title">[메이커] 카네이션으로 전하는 감사의 한마디 「카네이션 감사카드(5월)」
@@ -382,7 +396,7 @@
                                     <p class="survey-participant"><span>신청 : 12/12</span><span class="stand-by">대기 : 0/5</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
+                            <div class="event-box swiper-slide">
                                 <span class="sj">수지</span>
                                 <span class="pending">대기중</span>
                                 <p class="event-title">[5월 독서문화행사] (가족)업사이클링 팝업북 만들기(2차: 5.21.목)
@@ -394,9 +408,9 @@
                                     <p class="survey-participant"><span>신청 : 12/12</span><span class="stand-by">대기 : 0/5</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[메이커] 3D펜 리틀메이커스(2부) - 5월 30일(토) ※해당 일에는 내부교육으로 1부는 진행하지 않습니다.
                                     <a href="#"></a>
                                 </p>
@@ -406,9 +420,9 @@
                                     <p class="survey-participant"><span>신청 : 0/10</span><span class="stand-by">대기 : 0/0</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[메이커] 3D펜 리틀메이커스(1부) - 5월 16일(토)
                                     <a href="#"></a>
                                 </p>
@@ -418,9 +432,9 @@
                                     <p class="survey-participant"><span>신청 : 0/10</span><span class="stand-by">대기 : 0/0</span></p>
                                 </div>  
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span> 
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span> 
                                 <p class="event-title">[메이커] 3D펜 리틀메이커스(2부) - 5월 16일(토)
                                     <a href="#"></a>
                                 </p>
@@ -430,9 +444,9 @@
                                     <p class="survey-participant"><span>신청 : 0/10</span><span class="stand-by">대기 : 0/0</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[수지 온에어(On-Air)] 5월 14일(목) 키즈 승무원 - 4회차(16:00~16:30)
                                     <a href="#"></a>
                                 </p>
@@ -442,9 +456,9 @@
                                     <p class="survey-participant"><span>신청 : 0/1</span><span class="stand-by">대기 : 0/1</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[수지 온에어(On-Air)] 5월 14일(목) 키즈 승무원 - 1회차(14:00~14:30)
                                     <a href="#"></a>
                                 </p>
@@ -454,9 +468,9 @@
                                     <p class="survey-participant"><span>신청 : 0/1</span><span class="stand-by">대기 : 0/1</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[수지 온에어(On-Air)] 5월 14일(목) 키즈 승무원 - 3회차(15:20~15:50)
                                     <a href="#"></a>
                                 </p>
@@ -466,9 +480,9 @@
                                     <p class="survey-participant"><span>신청 : 0/1</span><span class="stand-by">대기 : 0/1</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
-                                <span class="event-ing before">신청전</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
+                                <span class="before">신청전</span>
                                 <p class="event-title">[수지 온에어(On-Air)] 5월 14일(목) 키즈 승무원 - 2회차(14:40~15:10)
                                     <a href="#"></a>
                                 </p>
@@ -478,8 +492,8 @@
                                     <p class="survey-participant"><span>신청 : 0/1</span><span class="stand-by">대기 : 0/1</span></p>
                                 </div>
                             </div>
-                            <div class="event-box">
-                                <span class="event-sj">수지</span>
+                            <div class="event-box swiper-slide">
+                                <span class="sj">수지</span>
                                 <span class="closed">마감</span>
                                 <p class="event-title">[메이커] 우리가족 놀이공원 「레고로 만드는 움직이는 놀이기구」(1부)
                                     <a href="#"></a>
@@ -490,7 +504,11 @@
                                     <p class="survey-participant"><span>신청 : 10/10</span><span class="stand-by">대기 : 10/10</span></p>
                                 </div>
                             </div>
-                        </div><!--/event-->
+                        </div><!--/ul banner-list-->
+                        <div class="btn-wrapper">
+                            <button class="swiper-button-prev more"><img src="images/icon/prev.png" alt="이전배너보기"></button>
+                            <button class="swiper-button-next more"><img src="images/icon/next.png" alt="다음배너보기"></button>
+                        </div><!--btn-wrapper-->
                     </div><!-- slide-banner-wrap -->
                 </div><!--/문화 행사-->
                 <!-- 북큐레이션 -->

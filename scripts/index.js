@@ -21,4 +21,29 @@ selBox.addEventListener("click", (e) => {
         sellist.classList.add("on");
     }
 })
-
+//스와이퍼 cdn
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 'auto', //cdn 슬라이더 너비 고정 초기화
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+//문화 행사 배너
+var swiper = new Swiper(".cult-banner", {
+    slidesPerView: 'auto',
+    centeredSlides: false, //강제 가운데 정렬 막기
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

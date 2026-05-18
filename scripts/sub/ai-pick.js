@@ -105,7 +105,7 @@ const data = [
   }
 ];
 //전역변수구간
-const contentsArea = document.querySelector(".user-select-area");//본문
+const contentsArea = document.querySelector(".user-select-wrapper");//본문
 const processInfo = document.querySelectorAll("#main .process-info li span");
 const stepTit = contentsArea.querySelector(".tit");
 const stepInfo = contentsArea.querySelector(".dupli-info")
@@ -123,7 +123,7 @@ const resetBtn = processBtns.querySelector(".reset");
 
 //로직 구간 ,함수작성부분
 renderUserAge()
-
+nextBtn.disabled = true;
 /*나이 출력 함수*/ 
 function renderUserAge(){
   let html ="";
@@ -203,14 +203,8 @@ function stepRender(){
   }
   
 }
-//버튼안 이미지 이벤트 위임
-BtnArea.querySelector("IMG").addEventListener('click', (e) => {
-if(e.target.tagName === "IMG"){e.target.closest('button')}
-})
-    
-  
 
-/*버튼 클릭 발생*/
+/*단계별 버튼 클릭 이벤트 함수*/
 let stepNum = 1;
 let userselected = "";//전역에 쓸 버튼데이터 저장 용도
 let userageSel = null; //출력 함수에 쓸 데이터 저장
@@ -227,17 +221,24 @@ BtnArea.addEventListener("click", function(e){
     //1단계만 라디오버튼속성 2단계는 체크박스 속성
     if(stepNum === 1){
       BtnArea.querySelectorAll("button").forEach(function(b){
-      b.classList.remove("on");
-    });
-    btn.classList.add("on");
-      
+        b.classList.remove("on");
+      });
+        btn.classList.add("on");
+        nextBtn.disabled = false;
     }else{
-    btn.classList.toggle("on");
-
+      btn.classList.toggle("on");
     }
-    nextBtn.classList.add("on");/*다음 버튼 on*/  
+    
+    //버튼 미 선택 시 다음버튼 비활성화시키기
+    const btnOn = BtnArea.querySelectorAll("button.on");
+      if(btnOn.length >= 1){
+        nextBtn.classList.add("on");/*다음 버튼 on*/
+        nextBtn.disabled = false;
+      }else{
+        nextBtn.disabled = true;
+        nextBtn.classList.remove("on");
+      }
   }
-
 });
 //다음버튼
 nextBtn.addEventListener("click",()=>{

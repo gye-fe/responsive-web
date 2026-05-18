@@ -1,11 +1,14 @@
 * { word-break: keep-all; overflow-wrap: break-word;}
   
 br {display: none;}
+* img {
+    object-fit: cover;
+}
 
 /* #aside {} */
 
-#main .contents .user-select-area input[type="radio"], 
-#main .contents .user-select-area input[type="checkbox"] {
+#main .contents .user-select-wrapper input[type="radio"], 
+#main .contents .user-select-wrapper input[type="checkbox"] {
     position: absolute;
     opacity: 0;
 }
@@ -46,25 +49,27 @@ br {display: none;}
 
 /*pc로 바뀔때 버튼이 앱솔루트화됨*/
 
-#main .contents .user-select-area {
+#main .contents .user-select-wrapper {
     padding-top: 20px;
     position: relative;
 }
  
-#main .contents .user-select-area .off {
+#main .contents .user-select-wrapper .off {
     display: none;
 }
-#main .contents .user-select-area .on { display: block;}
-#main .contents .user-select-area h3 {
+#main .contents .user-select-wrapper .on { display: block;}
+#main .contents .user-select-wrapper h3 {
     margin-bottom: 15px;
 }
-#main .contents .user-select-area .dupli-info {
+#main .contents .user-select-wrapper .dupli-info {
     margin-left: 8px;
     font-size: 1em;
     color: #666;
     font-weight: 400;
 }
-#main .contents .user-select-area .btns-area {
+
+/*1~3단계 구역*/
+#main .contents .user-select-wrapper .btns-area {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -73,7 +78,7 @@ br {display: none;}
 }
 .btns-area button {
     min-width: 50px;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     padding: 16px 8px;
     border-radius: 10px;
     display: flex;
@@ -92,13 +97,22 @@ br {display: none;}
     border: 1px solid #1b6eab;
     font-weight: 500;
 }
-.user-select-area .step-area .btns-area button img {
+.user-select-wrapper .step-area .btns-area button img {
     width: 100%;
     object-fit: cover;
     padding: 10px 15px;
     border-radius: 50%;
 }
-/*리스트 구역*/
+
+
+/* 4단계 구역*/
+.user-pick-area {
+    padding: 40px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
 .ai-pick-list {
     border-top: 2px solid #222;
     border-bottom: 1px solid #222;
@@ -107,35 +121,32 @@ br {display: none;}
     grid-template-columns: repeat(2, 1fr);
     gap: 20px
 } 
-.user-pick-area {
-    padding: 8px;
-    display: flex;
-    gap: 8px;
-    margin-bottom: 24px;
-}
-.user-pick-area .card-item{
+
+.user-select-wrapper .card-item{
     width: 100%;
-}
-.card-item {
-    width: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
 }
 
-.card-item a {
+.user-select-wrapper .ai-pick-list .card-item a {
     position: relative;
     display: block;
-    overflow: hidden;
     border-radius: 20px;
 }
 
-.img-box {
+.user-pick-area .img-box,
+.ai-pick-final .img-box {
     aspect-ratio: 1 / 1.5;
     background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
-.info-box {
+.user-books .info-box,
+.ai-pick-final .info-box {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -146,20 +157,22 @@ br {display: none;}
     transition: 0.3s;
 }
 
-.card-item:hover .info-box {
+.user-select-wrapper .card-item:hover .info-box {
     opacity: 1;
 }
 
-.book-tit {
+.user-books .user-pick-area  .book-tit {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
 }
-
-.book-desc {
+.ai-pick-list .card-item .img-box { position: relative;}
+/*결과단계*/
+.ai-pick-final .ai-pick-list .book-desc {
     font-size: 14px;
     line-height: 1.4;
 }
+
 
 
 /*버튼 구역*/
@@ -169,30 +182,30 @@ br {display: none;}
     margin-top: 32px;
     position: static;
 }
-#main .user-select-area .select-process-btns button {
+#main .user-select-wrapper .select-process-btns button {
     padding: 10px 15px;
     background-color: #727272;
     border: 1px solid #727272;
     font-size: 1rem;
 }
-#main .user-select-area .select-process-btns button.on {
+#main .user-select-wrapper .select-process-btns button.on {
     background-color: #1b6eab;
     color: #FFF;
     border: 1px solid #1b6eab;
 }
-#main .user-select-area .select-process-btns .prev-btn {
+#main .user-select-wrapper .select-process-btns .prev-btn {
     display: none; /*js로 관리*/
     background-color: #fff;
     border: 1px solid #727272;
     margin-right: 8px; 
 }
-#main .user-select-area .select-process-btns .reset {
+#main .user-select-wrapper .select-process-btns .reset {
     display: none;
     background-color: #1b6eab;
     color: #FFF;
 }
 
-#main .user-select-area .select-process-btns .reset { display: none;}
+#main .user-select-wrapper .select-process-btns .reset { display: none;}
 
 
 /*반응형 구간*/
@@ -214,7 +227,7 @@ br {display: none;}
     }
 }
 @media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    #main .contents .user-select-area .btns-area {
+    #main .contents .user-select-wrapper .btns-area {
         grid-template-columns: repeat(5, 1fr);
     };
     .btns-area button {
@@ -223,7 +236,7 @@ br {display: none;}
     .ai-pick-list {
         grid-template-columns: repeat(5, 1fr);
     };
-    .user-select-area {
+    .user-select-wrapper {
         position: relative;
         padding-top: 80px;
     }

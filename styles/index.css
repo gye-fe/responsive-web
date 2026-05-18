@@ -418,9 +418,6 @@
 .archive-banner .swiper {
     width: 100%;
 }
-/* .archive-banner .swiper-slide {
-    width: auto;
-} */
 .archive-banner .swiper-slide img {
     width: 100%;
     height: 100%;
@@ -688,8 +685,6 @@
     .culture-banner .event-box .event-title {font-size: 20px;}
 
 
-
-
     /*큐레이션*/
     
     .curation .slide-banner li.show {
@@ -791,8 +786,6 @@
     .sel-box a {
         margin-top: 5px;
     }
-
-
 
 
 }

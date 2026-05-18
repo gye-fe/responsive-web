@@ -180,10 +180,8 @@ input {
 }
 
 /* 메인내용부분 */
-#main {
-    width: 80%;
-}
-
+#main {width: 80%;}
+    
 /* 공통 border 스타일 */
 .base-form, .dropdown, .icon-btn li {
     border: 1px solid #e2e2e2;

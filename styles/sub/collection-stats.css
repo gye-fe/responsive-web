@@ -1,7 +1,7 @@
 * { word-break: keep-all; overflow-wrap: break-word;}
-br {display: none;}
-/* #aside {} */
-table { font-size: 14px;}
+
+
+table { font-size: 1em;}
 th, td { padding: 10px 5px;}
 #main .contents .chart-list {
     width: 100%;
@@ -18,18 +18,19 @@ th, td { padding: 10px 5px;}
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap:5px;
     padding: 30px 15px;
 }
-/* .chart tbody { border-bottom: 1px solid #555;} */
 #main .contents .grape-area,
-#main .contents .chrt
-{width: 100%;
-margin: 0 auto;}
-    
+#main .contents .chrt {
+    width: 100%;
+    margin: 0 auto;
+}
 
-#main .contents .grape-area canvas {
-    aspect-ratio: 1 / 1;
+#main .contents .grape-area {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 0;
 }
 
 #main .contents .cap-box {
@@ -37,15 +38,17 @@ margin: 0 auto;}
     justify-content: space-between;
     align-items: center;
 }
-.chart thead th:nth-child(2) {
-    background-color: transparent;
-}
 .chart th {
     border-bottom: 1px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
     width: 70px;
 }
-.chart tbody tr:last-child {
+.chart thead th:nth-child(2) {
+    background-color: transparent;
+    border-right: 0;
+}
+
+.chart tbody tr:last-child th {
     border-bottom: 1px solid #ababab;
 }
 
@@ -55,20 +58,18 @@ margin: 0 auto;}
     .btns-area label {
         font-size: 14px;
     }
-    .break-on {
-        display: block;
-    }
+    
 }
 @media screen and (min-width:768px){ /*태블릿 최소*/
-    #main .contents .grape-area {
-        margin-right: 16px;
+    #main .contents .grape-area canvas {
+        margin: auto;
+    }
+    .break-on {
+        display: none;
     }
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
     #main .contents .chart-list .chart-box {
         flex-direction: row;
-    }
-    #main .contents .chart-list .chart-box .grape-area {
-        width: calc(50% - 5px);
     }
 }

@@ -8,7 +8,8 @@ const data = [
       "옛이야기","미래","과거","지도","흥미로운","무서운","슬픈",
       "사랑","우정","과학","스포츠","그림/노래","음식","미스터리","판타지"
     ],
-    types: ["그림책","유아학습","놀이학습"]
+    types: ["그림책","유아학습","놀이학습"],
+    image : "../images/AI-pick/ico_age_1.png"
   },
   {
     age: "초등학생",
@@ -17,7 +18,8 @@ const data = [
       "옛이야기","미래","과거","지도","흥미로운","무서운","슬픈",
       "사랑","우정","과학","스포츠","그림/노래","음식","미스터리","판타지"
     ],
-    types: ["어린이문학","어린이학습/교양","어린이만화"]
+    types: ["어린이문학","어린이학습/교양","어린이만화"],
+    image : "../images/AI-pick/ico_age_2.png"
   },
   {
     age: "중학생",
@@ -26,8 +28,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화","청소년"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화","청소년"],
+    image : "../images/AI-pick/ico_age_3.png"
   },
   {
     age: "고등학생",
@@ -36,8 +38,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화","청소년"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화","청소년"],
+      image : "../images/AI-pick/ico_age_4.png"
   },
   {
     age: "20대",
@@ -46,8 +48,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화"],
+    image : "../images/AI-pick/ico_age_5.png"
   },
   {
     age: "30대",
@@ -59,8 +61,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화","부모"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화","부모"],
+    image : "../images/AI-pick/ico_age_6.png"
   },
   {
     age: "40대",
@@ -72,8 +74,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화","부모"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화","부모"],
+    image : "../images/AI-pick/ico_age_7.png"
   },
   {
     age: "50대",
@@ -85,8 +87,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화"],
+    image : "../images/AI-pick/ico_age_8.png"  
   },
   {
     age: "60대 이상",
@@ -98,8 +100,8 @@ const data = [
       "소설","에세이/시/희곡","인문","자기계발","경제/경영",
       "가정/취미/실용","의학/건강","여행/지리","과학/기술",
       "사회과학","종교","역사/문화","인물/평전",
-      "예술/대중문화","외국어","컴퓨터","만화"
-    ]
+      "예술/대중문화","외국어","컴퓨터","만화"],
+    image : "../images/AI-pick/ico_age_9.png"
   }
 ];
 //전역변수구간
@@ -115,7 +117,7 @@ const processBtns = document.querySelector(".select-process-btns");//행동버�
 const nextBtn = processBtns.querySelector(".next-btn");
 const prevBtn =  processBtns.querySelector(".prev-btn");
 const resetBtn = processBtns.querySelector(".reset");
-
+// let imgNum = 1;
 
 
 
@@ -126,7 +128,10 @@ renderUserAge()
 function renderUserAge(){
   let html ="";
   for (let i = 0; i < data.length; i++){
-      html += `<button data-age="${data[i].age}">${data[i].age}</button>`;
+      html += `<button data-age="${data[i].age}">
+      <img src="${data[i].image}">
+      ${data[i].age}
+      </button>`;
   }
   BtnArea.innerHTML = html;
   stepTit.textContent = "당신의 연령대를 선택해주세요";
@@ -198,14 +203,22 @@ function stepRender(){
   }
   
 }
+//버튼안 이미지 이벤트 위임
+BtnArea.querySelector("IMG").addEventListener('click', (e) => {
+if(e.target.tagName === "IMG"){e.target.closest('button')}
+})
+    
+  
 
 /*버튼 클릭 발생*/
 let stepNum = 1;
 let userselected = "";//전역에 쓸 버튼데이터 저장 용도
 let userageSel = null; //출력 함수에 쓸 데이터 저장
 BtnArea.addEventListener("click", function(e){
-  if(e.target.tagName === "BUTTON"){
-    userselected = e.target.dataset.age; //버튼안의 데이터아이디 저장
+  if(e.target.tagName === "IMG" || e.target.tagName === "BUTTON"){
+    const btn = e.target.closest('button')
+  // if(e.target.tagName = "BUTTON")
+    userselected = btn.dataset.age; //버튼안의 데이터아이디 저장
     for (let i = 0; i < data.length; i++) {
         if(userselected === data[i].age){
           userageSel = data[i];//출력함수에 쓸 데이터 저장
@@ -216,10 +229,10 @@ BtnArea.addEventListener("click", function(e){
       BtnArea.querySelectorAll("button").forEach(function(b){
       b.classList.remove("on");
     });
-    e.target.classList.add("on");
+    btn.classList.add("on");
       
     }else{
-      e.target.classList.toggle("on");
+    btn.classList.toggle("on");
 
     }
     nextBtn.classList.add("on");/*다음 버튼 on*/  

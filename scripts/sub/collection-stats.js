@@ -62,13 +62,10 @@ new Chart(bookChart, {
     data: bookData,
     options: {
         plugins: {
-            legend: {
-            display: false // 상단 라벨이 완전히 사라집니다.
-            },
-            tooltip: {
-                enabled: true
-            }
-            }
+            legend: {display: false}, // 상단 라벨이 완전히 사라집니다.
+            tooltip: {enabled: true}},
+        responsive:true,
+        maintainAspectRatio: false,
         }
 });
 
@@ -77,13 +74,10 @@ new Chart(nonBookChart, {
     data: nonBookData,
     options: {
         plugins: {
-            legend: {
-            display: false // 상단 라벨이 완전히 사라집니다.
-            },
-            tooltip: {
-                enabled: true
-            }
-            }
+            legend: {display: false}, // 상단 라벨이 완전히 사라집니다.
+            tooltip: {enabled: true}}, 
+        responsive:true,
+        maintainAspectRatio: false,
         }
 });
 new Chart(periodicalChart, {
@@ -91,13 +85,10 @@ new Chart(periodicalChart, {
     data: periodicalData,
     options: {
         plugins: {
-            legend: {
-            display: false // 상단 라벨이 완전히 사라집니다.
-            },
-            tooltip: {
-                enabled: true
-            }
-            }
+            legend: {display: false}, // 상단 라벨이 완전히 사라집니다.
+            tooltip: {enabled: true}}, 
+        responsive:true,
+        maintainAspectRatio: false,
         }
 });
 

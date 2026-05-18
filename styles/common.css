@@ -184,7 +184,6 @@ input {
     width: 80%;
 }
 
-
 /* 공통 border 스타일 */
 .base-form, .dropdown, .icon-btn li {
     border: 1px solid #e2e2e2;
@@ -212,6 +211,7 @@ input {
 .detail-box { /* 전 빗금이었던 박스 */
     border-top: 1px solid #222222;
     background-color: #f6f6f6;
+    margin-bottom: 25px;
 }
 
 .post-cont { /* 테이블 */

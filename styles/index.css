@@ -724,13 +724,13 @@
     .banner-wrap {
         display: flex;
         overflow: hidden;
-        gap:20px
     }
     .banner-wrap .sec-area:first-child {
-        width: calc(40% - 20px);
+        width: 38%;
     }
     .banner-wrap .sec-area:last-child {
-        width: calc(60% - 20px);
+        width: 60%;
+        margin-left: 2%;
     }
     #main .tab-btn button,
     #main .tab-btn button a {

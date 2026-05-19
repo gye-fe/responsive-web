@@ -1,7 +1,5 @@
 /* 메인내용부분 */
-#main {
-    width: 80%;
-}
+
 
 /*detail-box 구간*/
 .detail-box {
@@ -40,7 +38,8 @@
     margin-left: 10px;
     padding: 4px 8px;
     border: 1px solid #e2e2e2;
-    background-color: #f7f7f7;
+    background-color: #444;
+    color: #fff;
 }
 .detail-box .schedule-info {
     display: flex;
@@ -52,8 +51,7 @@
 }
 .detail-box .schedule-info li span {
     margin-right: 4px;
-    width: 30px;
-    padding: 1px 4px;
+    padding: 2px 5px;
     border-radius: 50%;
     color: #fff;
 }
@@ -80,7 +78,7 @@ tbody tr:last-child th, tbody tr:last-child td{
 .calendar th,
 .cal-info th {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 15px;
     border-bottom: 2px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
 }
@@ -88,7 +86,6 @@ tbody tr:last-child th, tbody tr:last-child td{
     border-right: 0 none;
 }
 .calendar td {
-    padding: 4px;
     height: 80px;
     border-bottom: 1px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
@@ -100,7 +97,7 @@ tbody tr:last-child th, tbody tr:last-child td{
 
 .calendar span {
     margin-left: 2px;
-    padding: 1px 4px;
+    padding:1px  4px;
     border-radius: 50px;
     color: #fff;
 }
@@ -113,12 +110,10 @@ tbody tr:last-child th, tbody tr:last-child td{
 .contents .icon-makerspace {
     background-color: #ffb400;
 }
-
-
-.calendar td .icon-today {
-    padding: 1px 5px;
+.contents .icon-today {
     background-color: #444;
 }
+
 .calendar .sun {
     color: #b33636;
 }
@@ -170,15 +165,18 @@ tbody tr:last-child th, tbody tr:last-child td{
     .cal-info th {
         font-size: 16px;
     }
-    .cal-info tr th:first-child {
+    /* .cal-info tr th:first-child {
         padding: 15px 5px;
-    }
+    } */
     .detail-box .schedule-info li {
         font-size: 16px;
     }
     
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
+    #main {
+    width: 80%;
+}
     .detail-box {
         flex-direction: row;
         justify-content: space-between;

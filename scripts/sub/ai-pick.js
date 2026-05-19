@@ -117,8 +117,6 @@ const processBtns = document.querySelector(".select-process-btns");//행동버�
 const nextBtn = processBtns.querySelector(".next-btn");
 const prevBtn =  processBtns.querySelector(".prev-btn");
 const resetBtn = processBtns.querySelector(".reset");
-// let imgNum = 1;
-
 
 
 //로직 구간 ,함수작성부분
@@ -174,7 +172,9 @@ function btnControl(){
     userBooksArea.classList.remove('off');
     stepArea.classList.add("off");
     resultArea.classList.add("off");
-    nextBtn.textContent ="결과보기"
+    nextBtn.textContent ="결과보기";
+    nextBtn.classList.add("on");/*다음 버튼 on*/
+    nextBtn.disabled = false;
   }else if(stepNum === 5){
     resultArea.classList.remove("off");
     userBooksArea.classList.add("off");
@@ -201,8 +201,13 @@ function stepRender(){
   }else{
     renderUserField(userageSel);
   }
-  
 }
+//다음버튼 비활성화 함수
+function nextDisabled(){
+    nextBtn.disabled = true;
+    nextBtn.classList.remove("on");
+}
+
 
 /*단계별 버튼 클릭 이벤트 함수*/
 let stepNum = 1;
@@ -235,8 +240,7 @@ BtnArea.addEventListener("click", function(e){
         nextBtn.classList.add("on");/*다음 버튼 on*/
         nextBtn.disabled = false;
       }else{
-        nextBtn.disabled = true;
-        nextBtn.classList.remove("on");
+        nextDisabled()
       }
   }
 });
@@ -246,7 +250,7 @@ nextBtn.addEventListener("click",()=>{
   stepRender();
   btnControl();
   updatestepInfo();
-  console.log(stepNum)//확인용
+  console.log(stepNum + "단계")//확인용
 });
 
 //이전버튼
@@ -262,4 +266,5 @@ resetBtn.addEventListener("click",()=>{
   stepRender();
   btnControl();
   updatestepInfo();
+  nextDisabled()
 })

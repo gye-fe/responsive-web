@@ -1,14 +1,9 @@
-/* 메인내용부분 */
-#main {
-    width: 80%;
-}
-
 /* #aside {} */
 #main .contents {
     padding-top: 30px;
 }
 select {
-    padding: 10px 5px;
+    padding: 10px 15px
 }
 /*form-area 공통부분*/
 #main .contents .form-area { padding: 15px; border: 1px solid #e2e2e2;}
@@ -16,7 +11,7 @@ select {
     display: flex;
     margin-top: 5px;
 }
-#main .contents .form-area div input { padding: 10px 5px;}
+#main .contents .form-area div input { border-radius: 3px;}
 #main .contents .form-area div .spacing {
     flex: 1;
 }
@@ -24,10 +19,11 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    padding: 10px 15px;
-    margin-right: 10px;
+    padding: 15px 20px;
+    margin-right: 8px;
     background-color: #f5f5f5;
+    font-size: 14px;
+    font-weight: 600;
 }
 #main .contents .form-area p span {
     font-size: 1em;
@@ -35,7 +31,7 @@ select {
 #main .contents .form-area .dropdown {
     flex: 1;
     margin-bottom: 5px;
-    font-size: 14px;
+    border-radius: 3px;
 }
 /*form-area 개인 부분*/
 
@@ -48,8 +44,6 @@ select {
 
 #main .contents .form-area .search-key03 input {
     width: 50%;
-    font-size: 14px;
-    padding: 10px 5px;
 }
 
 #main .contents .form-area .search-key01 .dropdown,
@@ -76,9 +70,6 @@ select {
     display: flex;
     gap:5px;
 }
-.search-key06 .spacing .select-wide {
-    padding: 10px 5px;
-}
 .search-key06 .select-wide .sort-by {
     display: none !important;
 }
@@ -102,7 +93,7 @@ select {
 /*width:640부터 오토로 바뀜*/
 #main .btn-area button {
     width: 120px;
-    padding: 10px 15px;
+    padding: 15px 10px;
 }
 #main .btn-area .reset-btn {
     background-color: #fff;
@@ -124,14 +115,35 @@ select {
     }
 }
 @media screen and (min-width:768px){ /*태블릿 최소*/
-
+    #main .contents .form-area p{
+        font-size: 16px;
+    }
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
+    #main {
+        width: 80%;
+    }
+
     #main .contents .form-area p {
         width: 100px;
     }
     
     #main .contents .chart-list .chart-box {
         flex-direction: row;
+    }
+    #main .contents .form-area .search-key01 li,
+    #main .contents .form-area .search-key02 .spacing {
+        display: flex;
+        flex-direction: row;
+    }
+    #main .contents .form-area .search-key01 .dropdown,
+    #main .contents .form-area .search-key02 .dropdown {
+        min-width: 20%;
+        margin-right: 4px;
+        margin-bottom: 0;
+    }
+    #main .contents .form-area .search-key01 .base-form 
+    #main .contents .form-area .search-key02 .base-form {
+        flex: 1;
     }
 }

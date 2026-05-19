@@ -481,6 +481,7 @@ input {
 .detail-box { /* 전 빗금이었던 박스 */
     border-top: 1px solid #222222;
     background-color: #f6f6f6;
+    margin-bottom: 25px;
 }
 
 .post-cont { /* 테이블 */

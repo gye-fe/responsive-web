@@ -6,9 +6,6 @@ br {display: none;}
 }
 
 /* 메인내용부분 */
-#main {
-    width: 80%;
-}
 
 /* #aside {} */
 
@@ -19,7 +16,8 @@ br {display: none;}
 }
 
 /*detail-box 영역*/
-#main .contents .detail-box dt {
+#main .contents .detail-box { padding: 15px;}
+#main .contents .detail-box .detail-info-title {
     font-weight: 500;
     font-size: 20px;
 }
@@ -132,9 +130,10 @@ br {display: none;}
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid #222;
+    cursor: pointer;
 }
 
-.user-select-wrapper .ai-pick-list .card-item a {
+.user-select-wrapper .ai-pick-list .card-item button {
     position: relative;
     display: block;
     border-radius: 20px;
@@ -156,14 +155,15 @@ br {display: none;}
     inset: 0;
     width: 100%;
     padding: 20px;
-    background: rgba(0,0,0,0.7);
     color: #fff;
-    opacity: 0;
+    background: rgba(0,0,0,0.7);
+    transform: translateY(100%);
     transition: 0.3s;
 }
 
 .user-select-wrapper .card-item:hover .info-box {
-    opacity: 1;
+    /* opacity: 1; */
+    transform: translateY(0);
 }
 
 .user-books .user-pick-area  .book-tit {
@@ -215,6 +215,7 @@ br {display: none;}
 
 /*반응형 구간*/
 @media screen and (max-width: 767px){/*모바일 최대*/
+    #main .contents .detail-box { padding: 20px;}
     #main .contents .process-info li,
     .btns-area label {
         font-size: 14px;
@@ -232,6 +233,11 @@ br {display: none;}
     }
 }
 @media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
+    #main {
+        width: 80%;
+    }
+
+    #main .contents .detail-box { padding: 25px;}
     #main .contents .user-select-wrapper .btns-area {
         grid-template-columns: repeat(5, 1fr);
     };

@@ -1,12 +1,10 @@
 * { word-break: keep-all; overflow-wrap: break-word;}
 
 /* 메인내용부분 */
-#main {
-    width: 80%;
-}
+
 
 table { font-size: 1em;}
-th, td { padding: 10px 5px;}
+th, td { padding: 10px;}
 #main .contents .chart-list {
     width: 100%;
     border: 1px solid #e1e1e1;
@@ -45,7 +43,7 @@ th, td { padding: 10px 5px;}
 .chart th {
     border-bottom: 1px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
-    width: 70px;
+    max-width: 50px;
 }
 .chart thead th:nth-child(2) {
     background-color: transparent;
@@ -73,6 +71,9 @@ th, td { padding: 10px 5px;}
     }
 }
 @media screen and (min-width:1024px){ /*pc 최소*/
+    #main {
+        width: 80%;
+    }
     #main .contents .chart-list .chart-box {
         flex-direction: row;
     }

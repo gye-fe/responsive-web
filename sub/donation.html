@@ -5,18 +5,614 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서기증 | 수지도서관</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/서브페이지명.css">
-    <script src="scripts/sub/서브페이지명.js" defer></script>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/sub/donation.css">
+    <script src="../scripts/common.js" defer></script>
+    <script src="../scripts/sub/donation.js" defer></script>
 </head>
 <body>
 
-    <div class="container">
-        <aside id="aside">
-            
+    <div class="container inner">
+        <aside id="aside" class="blind-m">
+            <h1>열린마당</h1>
+            <div class="side-tab">
+                <dl>
+                    <dt>도서관소식</dt>
+                </dl>
+                <dl>
+                    <dt>보도자료</dt>
+                </dl>
+                <dl>
+                    <dt>도서관연중행사</dt>
+                </dl>
+                <dl>
+                    <dt>도서관 카드뉴스</dt>
+                </dl>
+                <dl>
+                    <dt>자주하는질문</dt>
+                </dl>
+                <dl>
+                    <dt>묻고답하기</dt>
+                </dl>
+                <dl>
+                    <dt>설문조사</dt>
+                </dl>
+                <dl>
+                    <dt>원클릭대관신청</dt>
+                    <dd class="on">수지도서관대관신청</dd>
+                    <dd>원클릭대관신청</dd>
+                    <dd>원클릭대관신청안내</dd>
+                </dl>
+                <dl>
+                    <dt>견학신청</dt>
+                </dl>
+                <dl>
+                    <dt>시민참여</dt>
+                    <dd class="on">자원활동가</dd>
+                    <dd>자원봉사신청안내</dd>
+                    <dd>강사지원신청</dd>
+                    <dd>도서관공모</dd>
+                </dl>
+                <dl class="active">
+                    <dt>도서기증</dt>
+                </dl>
+            </div>
         </aside><!-- // #aside End -->
         <section id="main">
-            
+            <div class="main-top">
+                <p class="navi">
+                    <span>열린마당</span>
+                    <span>도서기증</span>
+                </p>
+                <h1 class="tit-main">도서기증</h1>
+            </div>
+            <div class="contents">
+                <ul class="tab-btn">
+                    <li class="info-tab active"><button>기증안내</button></li>
+                    <li class="apply-tab"><button>서약서작성</button></li>
+                    <li class="inquiry-tab"><button>기증신청조회</button></li>
+                    <li class="list-tab"><button>기증자료목록</button></li>
+                </ul>
+                <div class="tab-cont">
+                    <div class="dona-info cont show">
+                        <h2 class="tit-sec blind">기증안내</h2>
+                        <div class="detail-box">
+                            <p>도서기증</p>
+                            <p>집에서 잠자고 있는 질 좋은 장서를 보다 많은 시민에게 제공하기 위해 도서를 기증받고 있습니다. 기증 참여는 개인, 단체 누구나 가능합니다.</p>
+                        </div>
+                        <h3 class="tit-sub">기증 절차</h3>
+                        <div class="step-area">
+                            <dl class="step-box">
+                                <dt>STEP 01</dt>
+                                <dd>서약서 작성</dd>
+                                <dd>• 홈페이지에서 서약서 작성후 기증 신청</dd>
+                            </dl>
+                            <dl class="step-box">
+                                <dt>STEP 02</dt>
+                                <dd>도서관 방문</dd>
+                                <dd>• 기증신청조회에서 서약서를 출력, 기증 자료와 함께 제출</dd>
+                            </dl>
+                            <dl class="step-box">
+                                <dt>STEP 03</dt>
+                                <dd>기증 자료 선정</dd>
+                                <dd>• 기준에 따라 자료 선정 및 장서 등록</dd>
+                            </dl>
+                            <dl class="step-box">
+                                <dt>STEP 04</dt>
+                                <dd>기증 자료 목록 게시</dd>
+                                <dd>• 승인 완료 후 장서로 등록된 기증자료 목록을 게시</dd>
+                            </dl>
+                        </div>
+                        <h3 class="tit-sub">기증대상 자료</h3>
+                        <div class="explain">
+                            <p>신간도서로 도서관에 미소장중인 자료</p>
+                            <p>소장되어 있으나 대출빈도가 높은 자료</p>
+                            <p>향토자료 및 희귀자료 등 소장가치가 있다고 판단되는 자료</p>
+                            <p>점자도서, 큰글자 도서 등 장애인을 위한 자료</p>
+                            <p>기타 도서관 장서로 활용 가능한 자료</p>
+                        </div>
+                        <h3 class="tit-sub">기증제외 자료</h3>
+                        <div class="explain">
+                            <p>용인시 도서관에서 이미 소장하고 있는 자료</p>
+                            <p>파손·오손된 자료 및 개인 복사본 자료</p>
+                            <p>수험서, 문제집, 만화 등의 자료</p>
+                            <p>당해년 기준 발행 10년 이상된 출판자료</p>
+                            <p>기타 도서관 소장에 부적합하다고 판단되는 자료</p>
+                        </div>
+                        <h3 class="tit-sub">참고사항</h3>
+                        <div class="explain">
+                            <p>기증 받은 도서 중 도서관 장서로 등록되지 않을 수 있습니다.</p>
+                            <p>기증받은 도서가 기증 제외 자료일 경우 폐기될 수 있습니다.</p>
+                            <p>도서관 등록 전체, 별도 코너 마련 등 조건부 기증은 받지 않습니다.</p>
+                        </div>
+                        <h3 class="tit-sub">용인시립도서관 기증접수 및 문의</h3>
+                        <p class="chart-tit">처인구</p>  <!-- 표 들어갈 위치 -->
+                        <table class="chart">
+                            <!-- <thead></thead> -->
+                            <!-- <tfoot></tfoot> -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">용인 중앙 도서관</th>
+                                    <td>031-6193-1260</td>
+                                    <th scope="row">포곡 도서관</th>
+                                    <td>031-6193-1290</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">모현 도서관</th>
+                                    <td>031-6193-1330</td>
+                                    <th scope="row">남사 도서관</th>
+                                    <td>031-6193-1370</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">양지 해밀 도서관</th>
+                                    <td>031-6193-1285</td>
+                                    <th scope="row">이동 꿈틀 도서관</th>
+                                    <td>031-6193-1390</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="chart-tit">기흥구</p>
+                        <table class="chart">
+                            <!-- <thead></thead> -->
+                            <!-- <tfoot></tfoot> -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">구성 도서관</th>
+                                    <td>031-6193-1470</td>
+                                    <th scope="row">동백 도서관</th>
+                                    <td>031-6193-1310</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기흥 도서관</th>
+                                    <td>031-6193-1440</td>
+                                    <th scope="row">보라 도서관</th>
+                                    <td>031-6193-1490</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">흥덕 도서관</th>
+                                    <td>031-6193-1510</td>
+                                    <th scope="row">서농 도서관</th>
+                                    <td>031-6193-1530</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">창덕 도서관</th>
+                                    <td>031-6193-1350</td>
+                                    <th scope="row">영덕 도서관</th>
+                                    <td>031-6193-1550</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">구갈 희망 누리 도서관</th>
+                                    <td>031-6193-1465</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="chart-tit">수지구</p>
+                        <table class="chart">
+                            <!-- <thead></thead> -->
+                            <!-- <tfoot></tfoot> -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">수지 도서관</th>
+                                    <td>031-6193-1620</td>
+                                    <th scope="row">죽전 도서관</th>
+                                    <td>031-6193-1650</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상현 도서관</th>
+                                    <td>031-6193-1670</td>
+                                    <th scope="row">성복 도서관</th>
+                                    <td>031-6193-1700</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">동천 도서관</th>
+                                    <td>031-6193-1725</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="tit-sub">타기관 기증 문의</h3>
+                        <div class="explain">
+                            <p>국립중앙도서관 책다모아<a href="">(https://www.nl.go.kr/NL/contents/N30401010000.do)</a></p>
+                            <p>사랑의 책 나누기 운동본부<a href="">(https://www.facebook.com/nanumbk/)</a></p>
+                        </div>
+                    </div>
+                    <div class="dona-apply cont">
+                        <h2 class="tit-sec blind">서약서작성</h2>
+                        <form>
+                            <!-- 서약서작성01 -->
+                            <fieldset>
+                                <legend>개인정보 수집·이용 동의 안내</legend>
+                                <div class="apply-info">
+                                    <p>도서기증과 관련하여 아래와 같이 개인정보를 수집·이용하고자 합니다.</p>
+                                    <table class="chart">
+                                        <thead>
+                                            <tr>
+                                                <th>수집·이용 항목</th>
+                                                <th>수집·이용 목적</th>
+                                                <th>보유기간</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- <tfoot></tfoot> -->
+                                        <tbody>
+                                            <tr>
+                                                <td>개인 및 기관명, 주소, 휴대폰번호</td>
+                                                <td>정보주체동의 도서기증 신청자 현황</td>
+                                                <td>5년</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>개인정보 수집과 관련하여 동의를 거부할 권리가 있으며, 거부 시 도서기증이 불가능함을 알려드립니다.</p>
+                                </div>
+                                <p>위와 같이 개인정보를 수집·이용하는데 동의하십니까?</p>
+                                <div class="apply-radio">
+                                    <label><input type="radio" name="apply" id="apply00" value="0"> 동의안함</label>
+                                    <label><input type="radio" name="apply" id="apply01" value="1"> 동의함</label>
+                                </div>  
+                            </fieldset>
+                            <!-- 서약서작성02 -->
+                            <fieldset>
+                                <legend>기증 정보</legend>
+                                <p class="test">(모든 항목 필수 입력)</p>
+                                <button class="download">기증서약서 다운로드</button>
+                                <div class="base-form">
+                                    <dl class="library-ch">
+                                        <dt>기증도서관 선택</dt>
+                                        <dd>
+                                            <ul class="">
+                                                <li class="active">전체도서관</li>
+                                                <li>도서관정책과</li>
+                                                <li>구갈희망누리도서관</li>
+                                                <li>기흥도서관</li>
+                                                <li>남사도서관</li>
+                                                <li>동백도서관</li>
+                                                <li>동천도서관</li>
+                                                <li>모현도서관</li>
+                                                <li>보라도서관</li>
+                                                <li>보정도서관</li>
+                                                <li>상현도서관</li>
+                                                <li>서농도서관</li>
+                                                <li>성복도서관</li>
+                                                <li>수지도서관</li>
+                                                <li>양지해밀도서관</li>
+                                                <li>영덕도서관</li>
+                                                <li>이동꿈툴도서관</li>
+                                                <li>죽전도서관</li>
+                                                <li>창덕도서관</li>
+                                                <li>포곡도서관</li>
+                                                <li>흥덕도서관</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl class="name-ch">
+                                        <dt>개인 및 기관명</dt>
+                                        <dd>
+                                            <label for="" class="blind">개인 및 기관명 기입</label>
+                                            <input type="text" name="" id="">
+                                        </dd>
+                                    </dl>
+                                    <dl class="tell-num">
+                                        <dt>연락처</dt>
+                                        <dd>
+                                            <label for="tellFirst" class="blind">전화번호 앞자리 선택</label>
+                                            <ul name="tellFirst" id="tellFirst" class="">
+                                                <li class="active">010</li>
+                                                <li>011</li>
+                                                <li>016</li>
+                                                <li>017</li>
+                                                <li>02</li>
+                                                <li>031</li>
+                                                <li>032</li>
+                                            </ul>
+                                            <div>
+                                                <label for="tellMiddle" class="blind">전화번호 중간자리 기입</label>
+                                                <input type="text" name="tellMiddle" id="tellMiddle" maxlength="4">
+                                                <label for="tellLast" class="blind">전화번호 끝자리 기입</label>
+                                                <input type="text" name="tellLast" id="tellLast" maxlength="4">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="address">
+                                        <dt>주소</dt>
+                                        <dd>
+                                            <label>
+                                                <input type="text"> <button>주소찾기</button>
+                                            </label>
+                                            <label for="detailAd" class="blind">상세주소 기입</label>
+                                            <input type="text" name="detailAd" id="detailAd" placeholder="상세주소">
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>주요 기증 분야</dt>
+                                        <dd>
+                                            <label for="" class="blind">주요 기증 분야 기입</label>
+                                            <input type="text" name="" id="">
+                                            <span>※ 예) 일반도서, 아동청소년도서</span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="book-cnt">
+                                        <dt>도서수량</dt>
+                                        <dd>
+                                            <label>
+                                                <input type="text" name="" id="">
+                                                <span>(권)</span>
+                                            </label>
+                                        </dd>
+                                    </dl>
+                                    <dl class="return">
+                                        <dt>등록제외 자료 반환여부</dt>
+                                        <dd>
+                                            <label><input type="radio" name="return" id="return00" value="0"> 미반환</label>
+                                            <label><input type="radio" name="return" id="return01" value="1"> 반환(기증자 방문)</label>
+                                        </dd>
+                                    </dl>
+                                    <dl class="check">
+                                        <dt>인수증</dt>
+                                        <dd>
+                                            <label class="radio-btn"><input type="radio" name="issue" id="issue00" value="0"> 미발급(기증자 방문)</label>
+                                            <label class="radio-btn"><input type="radio" name="issue" id="issue01" value="1"> 발급(이메일 필수)</label> 
+                                            <div class="email-box">
+                                                <div class="email">
+                                                    <label for="email" class="blind">이메일 입력</label>
+                                                    <input type="text" name="email" id="email">
+                                                    <span>@</span>
+                                                    <label for="emailDot" class="blind">이메일 선택</label>
+                                                    <input type="text" name="emailDot" id="emailDot">
+                                                </div>
+                                                <ul class="domain">
+                                                    <li class="active">메일 선택</li>
+                                                    <li>gmail.com</li>
+                                                    <li>naver.com</li>
+                                                    <li>hanmail.net</li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="user-pwd">
+                                        <dt>비밀번호</dt>
+                                        <dd>
+                                            <label for="pwd" class="blind">비밀번호를 입력하세요</label>
+                                            <input type="password" name="pwd" id="pwd" class="pwd01" placeholder="비밀번호 입력">
+                                            <label for="rePwd" class="blind">비밀번호를 재입력하세요</label>
+                                            <input type="password" name="rePwd" id="rePwd" class="pwd02" placeholder="비밀번호 재입력">
+                                            <p class="pwd-check"></p>
+                                            <p class="sentence">8~20자 영어소문자, 숫자, 특수문자사용 가능</p>
+                                            <p class="sentence">신청 조회 시 꼭 필요합니다</p>
+                                            <p class="sentence">등록 완료 후 비밀번호 수정/찾기가 어려우니 꼭 확인해주세요.</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="btn">
+                                    <button class="cancel-btn">취소</button>
+                                    <button class="apply-btn">신청하기</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="dona-inquiry cont">
+                        <h2 class="tit-sec blind">기증신청조회</h2>
+                        <div class="detail-box">
+                            <p>유의사항</p>
+                            <p class="sentence">기증신청조회에서 기증서약서 출력 후 직접 방문하여 기증 담당자에게 접수</p>
+                            <p class="sentence">용인시 도서관 자료기증 처리기준에 따라 선정된 자료는 도서관 장서로 등록</p>
+                            <p class="sentence">선정에서 제외된 자료는 도서를 필요로 하는 관련기관에 재기증</p>
+                        </div>
+                        <div class="base-form">
+                            <form>
+                                <fieldset>
+                                    <legend class="blind">기증신청조회 검색</legend>
+                                    <div class="test01">
+                                        <label for="libraryCh" class="blind">조회할 도서관 선택</label>
+                                        <ul name="libraryCh" id="libraryCh" class="library-ch">
+                                            <li class="active">전체도서관</li>
+                                            <li>도서관정책과</li>
+                                            <li>구갈희망누리도서관</li>
+                                            <li>기흥도서관</li>
+                                            <li>남사도서관</li>
+                                            <li>동백도서관</li>
+                                            <li>동천도서관</li>
+                                            <li>모현도서관</li>
+                                            <li>보라도서관</li>
+                                            <li>보정도서관</li>
+                                            <li>상현도서관</li>
+                                            <li>서농도서관</li>
+                                            <li>성복도서관</li>
+                                            <li>수지도서관</li>
+                                            <li>양지해밀도서관</li>
+                                            <li>영덕도서관</li>
+                                            <li>이동꿈툴도서관</li>
+                                            <li>죽전도서관</li>
+                                            <li>창덕도서관</li>
+                                            <li>포곡도서관</li>
+                                            <li>흥덕도서관</li>
+                                        </ul>
+                                    </div>
+                                    <div class="search">
+                                        <ul class="subject-ch">
+                                            <li class="active">신청자명</li>
+                                        </ul>
+                                        <div>
+                                            <label for="userName" class="blind">조회할 신청자명 기입</label>
+                                            <input type="text" name="userName" id="userName">
+                                            <button>검색</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="post-cont">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="blind-m number">번호</th>
+                                        <th class="library">기증도서관</th>
+                                        <th class="user">기증자(처)</th>
+                                        <th class="blind-m date">신청일</th>
+                                        <th class="state">처리상태</th>
+                                    </tr>
+                                </thead>
+                                <!-- <tfoot></tfoot> -->
+                                <tbody>
+                                    <tr>
+                                        <td class="blind-m number">202</td>
+                                        <td class="library"><span class="lb-cate bj">보정</span></td>
+                                        <td class="user">현민지</td>
+                                        <td class="blind-m date">2026.04.25</td>
+                                        <td class="state">신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">201</td>
+                                        <td class="library"><span class="lb-cate cd">창덕</span></td>
+                                        <td class="user">윤재성</td>
+                                        <td class="blind-m date">2026.04.23</td>
+                                        <td class="state">신청승인</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">200</td>
+                                        <td class="library"><span class="lb-cate gh">기흥</span></td>
+                                        <td class="user">이찬주</td>
+                                        <td class="blind-m date">2026.04.17</td>
+                                        <td class="state">신청취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">199</td>
+                                        <td class="library"><span class="lb-cate sb">성복</span></td>
+                                        <td class="user">이은정</td>
+                                        <td class="blind-m date">2026.04.12</td>
+                                        <td class="state">신청취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">198</td>
+                                        <td class="library"><span class="lb-cate bj">보정</span></td>
+                                        <td class="user">장진석</td>
+                                        <td class="blind-m date">2026.04.07</td>
+                                        <td class="state">신청취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">197</td>
+                                        <td class="library"><span class="lb-cate dc">동천</span></td>
+                                        <td class="user">박수만</td>
+                                        <td class="blind-m date">2026.04.01</td>
+                                        <td class="state">신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">196</td>
+                                        <td class="library"><span class="lb-cate bj">보정</span></td>
+                                        <td class="user">정건</td>
+                                        <td class="blind-m date">2026.03.31</td>
+                                        <td class="state">신청취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">195</td>
+                                        <td class="library"><span class="lb-cate sj">수지</span></td>
+                                        <td class="user">박현주</td>
+                                        <td class="blind-m date">2026.03.29</td>
+                                        <td class="state">신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">194</td>
+                                        <td class="library"><span class="lb-cate sj">수지</span></td>
+                                        <td class="user">오정민</td>
+                                        <td class="blind-m date">2026.03.28</td>
+                                        <td class="state">신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blind-m number">193</td>
+                                        <td class="library"><span class="lb-cate jj">죽전</span></td>
+                                        <td class="user">한신애</td>
+                                        <td class="blind-m date">2026.03.25</td>
+                                        <td class="state">신청중</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="paging">
+                                <a href="#" class="paging-btn first"></a>
+                                <a href="#" class="paging-btn prev"></a>
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                                <a href="#" class="paging-btn next"></a>
+                                <a href="#" class="paging-btn last"></a>
+                            </p>
+                        </div>  <!-- //.post-cont End -->
+                    </div>
+                    <div class="dona-list cont">
+                        <h2 class="tit-sec blind">기증자료목록</h2>
+                        <div class="base-form">
+                            <form>
+                                <fieldset>
+                                    <legend class="blind">기증신청조회 검색</legend>
+                                    <label for="libraryCh" class="blind">조회할 도서관 선택</label>
+                                    <div class="test01">
+                                        <ul name="libraryCh" id="libraryCh" class="library-ch">
+                                            <li class="active">전체도서관</li>
+                                            <li>도서관정책과</li>
+                                            <li>구갈희망누리도서관</li>
+                                            <li>기흥도서관</li>
+                                            <li>남사도서관</li>
+                                            <li>동백도서관</li>
+                                            <li>동천도서관</li>
+                                            <li>모현도서관</li>
+                                            <li>보라도서관</li>
+                                            <li>보정도서관</li>
+                                            <li>상현도서관</li>
+                                            <li>서농도서관</li>
+                                            <li>성복도서관</li>
+                                            <li>수지도서관</li>
+                                            <li>양지해밀도서관</li>
+                                            <li>영덕도서관</li>
+                                            <li>이동꿈툴도서관</li>
+                                            <li>죽전도서관</li>
+                                            <li>창덕도서관</li>
+                                            <li>포곡도서관</li>
+                                            <li>흥덕도서관</li>
+                                        </ul>
+                                    </div>
+                                    <div class="search">
+                                        <ul class="subject-ch">
+                                            <li class="active">제목</li>
+                                            <li>내용</li>
+                                        </ul>
+                                        <div>
+                                            <label for="userName" class="blind">조회할 제목 또는 내용 기입</label>
+                                            <input type="text" name="userName" id="userName">
+                                            <button>검색</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="post-cont">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="blind-m number">번호</th>
+                                        <th class="title">제목</th>
+                                        <th class="blind-m attach">첨부</th>
+                                        <th class="date">등록일</th>
+                                        <th class="blind-m views">조회수</th>
+                                    </tr>
+                                </thead>
+                                <!-- <tfoot></tfoot> -->
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <span>등록된 게시글이 없습니다.</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!-- // .contents End -->
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 

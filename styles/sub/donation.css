@@ -1,0 +1,710 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 메인내용부분 */
+#main {
+    width: 80%;
+}
+
+
+/* tab-btn */
+#main .contents .tab-btn {
+    margin-bottom: 25px;
+}
+#main .contents .tab-btn li {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #e2e2e2;
+}
+#main .contents .tab-btn.show li {  /* 모바일 드롭다운용 */
+    display: block;
+}
+#main .contents .tab-btn li.active {
+    display: block;
+    background-color: #0d4f80;
+    border: 1px solid #0d4f80;
+}
+#main .contents .tab-btn li.active button {
+    color: #fff;
+    font-weight: 500;
+}
+
+#main .contents .tab-btn button {
+    font-size: 18px;
+    width: 100%;
+}
+
+
+/* 공통부분 */
+#main .contents .detail-box {
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.detail-box p:first-child {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#main .contents .tit-sub {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 0 none;
+}
+legend {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* .dona-info */
+#main .contents .dona-info {
+    display: none;
+}
+#main .contents .dona-info.show {
+    display: block;
+}
+
+/* 기증절차 */
+.dona-info .step-box {
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.dona-info .step-box dt {
+    background-color: #e2e2e2;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.dona-info .step-box dd {
+    padding: 0 20px;
+}
+.dona-info .step-box dd:nth-child(2) {
+    font-weight: 500;
+    color: #1b6eab;
+}
+
+/* */
+.dona-info .explain p {
+    padding-left: 16px;
+    position: relative;
+}
+.dona-info .explain p::before {
+    content: "•";
+    position: absolute; left: 0; top: -2px;
+    font-size: 18px;
+}
+
+/* 접수문의 */
+.dona-info .chart-tit {
+    font-size: 18px;
+    font-weight: 500;
+}
+.dona-info .chart {
+    margin: 5px 0 20px 0;
+    table-layout: fixed;
+}
+.chart tr:last-child th {
+    border-bottom: 1px solid #ababab;
+}
+.chart th {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.2;
+    padding: 15px;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: 500;
+}
+.chart td {
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+
+/* .dona-apply */
+#main .contents .dona-apply {
+    display: none;
+}
+#main .contents .dona-apply.show {
+    display: block;
+}
+
+/* 동의안내 */
+.dona-apply .apply-info {
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+.dona-apply .apply-info table {
+    margin: 10px 0;
+}
+.dona-apply .apply-info table th, .dona-apply .apply-info table td {
+    border-right: 1px solid #e2e2e2;
+}
+.apply-info table th:last-child, .apply-info table td:last-child {
+    border-right: 0 none;
+}
+
+.dona-apply .apply-radio input {
+    appearance: auto;
+    width: auto;
+}
+
+/* 기증정보 */
+.dona-apply fieldset:last-child {
+    margin-top: 20px;
+    position: relative;
+}
+.dona-apply .test {
+    font-size: 14px;
+}
+.dona-apply .download {
+    position: absolute; right: 0; top: -5px;
+    padding: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #555;
+}
+
+.dona-apply .base-form {
+    border-top: 2px solid #555;
+    margin-top: 5px;
+}
+.dona-apply .base-form dl {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    border-bottom: 1px solid #e2e2e2;
+}
+.dona-apply .base-form dt {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8f8fa;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.dona-apply .base-form dd {
+    width: 70%;
+    padding: 10px;
+}
+
+/* 도서관선택 */
+.dona-apply .library-ch {
+    height: 65px;
+}
+
+.dona-apply .library-ch dd {
+    position: relative;
+}
+.dona-apply .library-ch ul {
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute; left: 10px; top: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+.dona-apply .library-ch ul.show {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.dona-apply .library-ch li {
+    display: none;
+    height: 43px;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+}
+.library-ch li:first-child {
+    border-top: 0 none;
+}
+.library-ch ul li.active {
+    display: block;
+    border-top: 0 none;
+}
+.library-ch ul.show li {
+    display: block;
+    border-top: 1px solid #ccc;
+}
+.library-ch ul.show li:first-child {
+    border-top: 0 none;
+}
+
+/* 연락처 */
+.dona-apply .tell-num {
+    height: 65px;
+}
+.dona-apply .tell-num dd {
+    display: flex;
+    gap: 4px;
+    position: relative;
+}
+.dona-apply .tell-num ul {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+    position: absolute; left: 10px; top: 10px;
+    background-color: #fff;
+}
+.dona-apply .tell-num ul.show {
+    position: absolute;
+    background-color: #fff
+}
+
+.dona-apply .tell-num li {
+    display: none;
+    height: 43px;
+    padding: 10px 20px 10px 15px;
+    border-top: 1px solid #ccc;
+}
+.tell-num li:first-child {
+    border-top: 0 none;
+}
+.tell-num ul li.active {
+    display: block;
+    border-top: 0 none;
+}
+.tell-num ul.show li {
+    display: block;
+    border-top: 1px solid #ccc;
+}
+.tell-num ul.show li:first-child {
+    border-top: 0 none;
+}
+
+.dona-apply .tell-num dd div {
+    position: absolute; left: calc(30% + 14px); top: 10px;
+    display: flex;
+    gap: 4px;
+    padding-right: 10px;
+}
+
+/* 주소 */
+.dona-apply .address label {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+.dona-apply .address button {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* 도서수량 */
+.dona-apply .book-cnt label {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.dona-apply .book-cnt input {
+    border: 0 none;
+    outline: none;
+    flex: 1;
+}
+.dona-apply .book-cnt span {
+    line-height: 43px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+/* 반환여부 */
+.dona-apply .return dd {
+    display: flex;
+    flex-direction: column;
+}
+.dona-apply .return input {
+    appearance: auto;
+    width: auto;
+}
+
+/* 인수증 */
+.dona-apply .check {
+    height: 172px;
+}
+.dona-apply .check dd {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.dona-apply .check .radio-btn input {
+    appearance: auto;
+    width: auto;
+}
+.check .email-box {
+    margin-top: 5px;
+}
+.check .email-box .email {
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.check .email span {
+    padding: 0 4px;
+    line-height: 45px;
+    vertical-align: middle;
+}
+.check ul {
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute; right: 10px; bottom: 10px;
+    background-color: #fff;
+}
+.check li {
+    display: none;
+    height: 43px;
+    padding: 10px 20px 10px 15px;
+    border-top: 1px solid #ccc;
+}
+.check li:first-child {
+    border-top: 0 none;
+}
+.check ul.show li {
+    display: block;
+    border-top: 1px solid #ccc;
+}
+.check ul.show li:first-child {
+    border-top: 0 none;
+}
+.check li.active {
+    display: block;
+    border-top: 0 none;
+}
+
+/* 비밀번호 */
+.dona-apply .user-pwd input {
+    margin-bottom: 5px;
+} 
+.dona-apply .user-pwd p {
+    padding-left: 16px;
+    line-height: 1.3;
+}
+.user-pwd .pwd-check {
+    display: none;
+    height: 20px;
+}
+.user-pwd .pwd-check.show {
+    display: block;
+}
+.user-pwd p.sentence {
+    position: relative;
+}
+.user-pwd p.sentence::before {
+    content: "※";
+    position: absolute; left: 0; top: -2px;
+    font-size: 18px;
+}
+
+/* 버튼 */
+.dona-apply .btn {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    box-sizing: border-box;
+}
+.dona-apply .btn .cancel-btn {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #e2e2e2;
+    font-size: 18px;
+    font-weight: 500;
+}
+.dona-apply .btn .apply-btn {
+    width: 60%;
+    padding: 10px 20px;
+    background-color: #5F99C4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.dona-apply .btn .apply-btn.active {
+    background-color: #1b6eab;
+}
+
+
+/* .dona-inquiry */
+#main .contents .dona-inquiry {
+    display: none;
+}
+#main .contents .dona-inquiry.show {
+    display: block;
+}
+
+/* 디테일박스 */
+.dona-inquiry .detail-box .sentence {
+    padding-left: 16px;
+    position: relative;
+}
+.detail-box .sentence::before {
+    content: "▪";
+    position: absolute; left: 0; top: 0;
+    font-size: 18px;
+}
+
+/* 조회검색 */
+.dona-inquiry .base-form, .dona-list .base-form {
+    height: 120px;
+    border: 0 none;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e2e2e2;
+    position: relative;
+}
+
+.dona-inquiry .base-form .library-ch, .dona-list .base-form .library-ch {
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute; left: 10px; top: 10px;
+    z-index: 1;
+}
+.dona-inquiry .base-form .library-ch.show, .dona-list .base-form .library-ch.show {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.dona-inquiry .base-form .search, .dona-list .base-form .search {
+    width: calc(100% - 20px);
+    display: flex;
+    gap: 4px;
+    margin-top: 5px;
+    position: relative; right: 10px; bottom: 10px;
+}
+
+.dona-inquiry .base-form .search ul, .dona-list .base-form .search ul {
+    width: 20%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute; left: 0; top: 0;
+}
+
+.dona-inquiry .base-form li, .dona-list .base-form li {
+    display: none;
+    height: 46px;
+    padding: 10px 20px 10px 15px;
+    border-top: 1px solid #e2e2e2;
+}
+.dona-inquiry .base-form li:first-child, .dona-list .base-form li:first-child {
+    border-top: 0 none;
+}
+
+.dona-inquiry .base-form ul li.active, .dona-list .base-form ul li.active {
+    display: block;
+    border-top: 0 none;
+}
+.dona-inquiry .base-form ul.show li, .dona-list .base-form ul.show li {
+    display: block;
+    border-top: 1px solid #e2e2e2;
+}
+.dona-inquiry .base-form ul.show li:first-child, .dona-list .base-form ul.show li:first-child {
+    border-top: 0 none;
+}
+
+.dona-inquiry .base-form .search div, .dona-list .base-form .search div {
+    width: calc(80% - 4px);
+    position: absolute; left: calc(20% + 4px); top: 0;
+    display: flex;
+    gap: 4px;
+}
+
+.dona-inquiry .base-form input, .dona-list .base-form input {
+    background-color: #fff;
+}
+
+.dona-inquiry .base-form button, .dona-list .base-form button {
+    width: 50%;
+    border: 1px solid #444;
+    background-color: #444;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 10px 0;
+    box-sizing: border-box
+}
+
+/* 테이블 */
+.post-cont table { 
+    table-layout: fixed;
+    margin-bottom: 20px;
+}
+.post-cont table th, .post-cont .library, .post-cont .state, .post-cont .number, .post-cont .date {
+    text-align: center;
+}
+.post-cont th {
+    font-weight: 500;
+}
+.post-cont th, .post-cont td {
+    padding: 10px 0;
+}
+.post-cont th:last-child, .post-cont td:last-child {
+    border-right: 0 none;
+}
+.post-cont td.user {
+    padding-left: 10px;
+}
+
+.paging {
+    display: flex;
+    justify-content: center
+}
+.paging a {
+    line-height: 24px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 2px;
+}
+
+
+/* .dona-list */
+#main .contents .dona-list {
+    display: none;
+}
+#main .contents .dona-list.show {
+    display: block;
+}
+
+.dona-list table { 
+    table-layout: fixed;
+    margin-bottom: 10px;
+}
+.dona-list table th {
+    text-align: center;
+}
+.dona-list table th.title {
+    width: 100%;
+}
+.dona-list .post-cont td {
+    padding: 50px 10px;
+    text-align: center;
+}
+.dona-list .post-cont td span {
+    display: inline-block;
+    position: relative;
+    padding-left: 137px;
+    height: 100px;
+    line-height: 100px;
+}
+.dona-list .post-cont td span::before {
+    content: "";
+    background: url("../../images/donation/ico_nodata.png") no-repeat;
+    background-position: 0 0;
+    width: 127px;
+    height: 100px;
+    position: absolute; left: 0; top: 0;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .post-cont .blind-m { display: none; }
+    .post-cont .library, .post-cont .state, .post-cont .date { width: 80px; }
+}
+
+@media screen and (min-width: 768px){
+    #main .contents .tab-btn {
+        display: flex;
+    }
+    #main .contents .tab-btn li {
+        display: block;
+        border-left: 0 none;
+    }
+    #main .contents .tab-btn li:first-child{
+        border-left: 1px solid #e2e2e2;
+    }
+    #main .contents .tab-btn li.active {
+        z-index: 1;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #main .contents .tab-btn li button {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    /*  */
+    .dona-info .step-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /*  */
+    .dona-apply .check {
+        height: 122px;
+    }
+    .check .email-box {
+        display: flex;
+    }
+    .check .email-box .email {
+        width: 70%;
+        margin-bottom: 0;
+    }
+    .check .email-box .domain {
+        width: calc(30% - 10px);
+        margin-left: 5px;
+    }
+
+    /*  */
+    .post-cont .library, .post-cont .date, .post-cont .number, .post-cont .state, .post-cont .attach, .post-cont .views { width: 100px; }
+
+    /*  */
+    .dona-inquiry .base-form, .dona-list .base-form {
+        height: 68px;
+    }
+    .dona-inquiry .base-form fieldset, .dona-list .base-form fieldset {
+        display: flex;
+    }
+
+    .dona-inquiry .base-form .library-ch, .dona-list .base-form .library-ch {
+        width: calc(30% - 14px);
+    }
+
+    .dona-inquiry .base-form .search, .dona-list .base-form .search {
+        margin-top: 0;
+        width: calc(70% - 10px);
+        position: absolute; top: 10px; bottom: auto;
+    }
+    .base-form .search .subject-ch {
+        width: 50%;
+    }
+    .base-form .search button {
+        padding: 10px 0;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #main .contents .step-area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .dona-apply .check {
+        height: 128.5px;
+    }
+}

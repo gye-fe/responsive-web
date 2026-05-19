@@ -1,0 +1,361 @@
+/* 메인내용부분 */
+#main {
+    width: 80%;
+}
+
+#main .contents .tab-btn {
+    display: flex;
+    margin-bottom: 25px;
+}
+.contents .tab-btn li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #e2e2e2;
+}
+.contents .tab-btn li.active {
+    background-color: #0d4f80;
+    border: 1px solid #0d4f80;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contents .tab-btn li button {
+    font-size: 18px;
+    font-weight: 500;
+}
+.contents .tab-btn li.active button {
+    color: #fff;
+}
+
+
+/* .space-info */
+#main .contents .space-info {
+    display: none;
+}
+#main .contents .space-info.show {
+    display: block;
+}
+
+#main .contents .tit-sub {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.space-info .explain p {
+    padding-left: 16px;
+    position: relative;
+}
+.space-info .explain .sentence::before {
+    content: "▪";
+    font-size: 18px;
+    color: #333;
+    position: absolute; left: 0; top: -2px;
+}
+.space-info .explain .red {
+    color: #e72121;
+}
+
+.space-info .step-box {
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.space-info .step-box dt {
+    background-color: #e2e2e2;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.space-info .step-box dd {
+    padding: 0 20px;
+}
+
+.space-info .btns {
+    width: 100%;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e2e2e2;
+    text-align: center;
+}
+.space-info .btns p {
+    line-height: 1.2;
+}
+.space-info .btns button {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+.space-info .btns .check-btn {
+    background-color: #727272;
+}
+.space-info .btns .apply-btn {
+    margin-left: 10px;
+    background-color: #1b6eab;
+}
+
+
+/* .space-apply */
+#main .contents .space-apply {
+    display: none;
+}
+#main .contents .space-apply.show {
+    display: block;
+}
+
+.space-apply .detail-box {
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.space-apply .detail-box p:first-child {
+    font-size: 20px;
+    font-weight: 500;
+}
+.space-apply .detail-box p:nth-child(2) {
+    margin-bottom: 8px;
+}
+
+.space-apply .detail-box span {
+    padding-left: 24px;
+    padding-right: 4px;
+    position: relative;
+}
+.space-apply .detail-box .today::before {
+    content: "T";
+    font-size: 14px;
+    background-color: #444;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 50px;
+    text-align: center;
+    position: absolute; left: 0; top: -1px;
+}
+.space-apply .detail-box .rest::before {
+    content: "H";
+    font-size: 14px;
+    background-color: #76C7FF;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 50px;
+    text-align: center;
+    position: absolute; left: 0; top: -1px;
+}
+
+.space-apply .space-ch {
+    display: flex;
+    background-color: #e2e2e2;
+    padding: 10px 20px
+}
+.space-apply .space-ch span {
+    font-weight: 500;
+    line-height: 33px;
+    vertical-align: middle;
+}
+.space-apply .space-ch div {
+    margin-left: auto;
+}
+.space-apply .space-ch button {
+    font-size: 16px;
+    padding: 4px 8px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+}
+.space-apply .space-ch button.active {
+    font-weight: 500;
+    color: #fff;
+    background-color: #444;
+}
+
+.space-apply .calendar {
+    margin-top: 20px;
+    border-top: 2px solid #555;
+}
+.space-apply .calendar .month {
+    display: flex;
+    padding: 10px;
+}
+.space-apply .calendar .month p {
+    line-height: 44px;
+    vertical-align: middle;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.space-apply .calendar .month button {
+    padding: 4px 8px;
+    border: 1px solid #e2e2e2;
+}
+.space-apply .calendar .month button:last-child {
+    margin-left: auto;
+    line-height: 34px;
+    font-size: inherit;
+}
+
+.space-apply .calendar table {
+    display: none;
+    border-top: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+}
+.space-apply .calendar table.show {
+    display: table;
+}
+.space-apply .calendar th, .space-apply .calendar td {
+    width: calc(100% / 7);
+}
+.space-apply .calendar th {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+.space-apply .calendar th:last-child {
+    border-right: 0 none;
+}
+.space-apply .calendar td {
+    padding: 4px;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    background-color: #f0f0f0;
+}
+.space-apply .calendar td:last-child {
+    border-right: 0 none;
+}
+.space-apply .calendar td span {
+    margin-left: 2px;
+    padding: 1px 4px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #76C7FF;
+}
+.space-apply .calendar td span.today {
+    padding: 1px 5px;
+    background-color: #444;
+}
+
+.space-apply .calendar .sun {
+    color: #b33636;
+}
+.space-apply .calendar .sat {
+    color: #3e5cbe;
+}
+
+.space-apply .calendar .possible {
+    margin-top: 8px;
+}
+.space-apply .calendar .possible span {
+    padding-left: 18px;
+    position: relative;
+}
+.space-apply .calendar .possible .ok::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute; left: 0; top: 50%;
+    transform: translateY(-50%);
+}
+.space-apply .calendar .possible .no::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    position: absolute; left: 0; top: 50%;
+    transform: translateY(-50%);
+}
+
+.space-apply .time, .space-apply .schedule {
+    margin-top: 20px;
+    border-top: 2px solid #555;
+}
+.space-apply .time p, .space-apply .schedule p {
+    padding-top: 10px;
+}
+.space-apply .time .choice, .space-apply .schedule .choice {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.space-apply .time .time-cont, .space-apply .schedule .schedule-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+    height: 200px;
+    padding: 20px 10px;
+}
+
+.space-apply .time-ch .cont-box {
+    display: none;
+}
+.space-apply .time-ch .cont-box.show {
+    display: block;
+    text-align: center;
+}
+.space-apply .time-ch .cont-box img {
+    width: 80px;
+    height: 80px;
+}
+
+.space-apply .time .time-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.space-apply .time .time-btns button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #e2e2e2;
+}
+
+.space-apply .apply-btn {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #5F99C4;
+}
+.space-apply .apply-btn.active {
+    background-color: #1B6EAB;
+}
+
+@media screen and (min-width: 768px) {
+    .contents .tab-btn li button {
+        font-size: 20px;
+    }
+
+    .space-info .step-area {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .space-apply .apply-ch {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+    }
+    .space-apply .calendar {
+        width: 100%;
+    }
+    .space-apply .time-ch {
+        width: 100%;
+    }
+}

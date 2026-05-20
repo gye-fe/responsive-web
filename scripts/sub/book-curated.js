@@ -12,7 +12,7 @@ filterlib.addEventListener("click", (e) => {
     if (!clickedLi) return;
     if (pickLib.length === 1){
         allLib.forEach((lib) => {
-        lib.classList.add("show");
+            lib.classList.add("show");
         });
         } else{
         allLib.forEach((lib) => {
@@ -20,7 +20,7 @@ filterlib.addEventListener("click", (e) => {
         });
         clickedLi.classList.add("show");
         filterlib.classList.remove("open");
-        }
+    }
 });
 //도서관 제목 내용
 filterTit.addEventListener("click", (e) => {

@@ -1,80 +1,116 @@
-/* 메인내용부분 */
+::-webkit-scrollbar {
+  display: none;
+}
 
-/*검색창*/
 .contents .base-form {
-    border: 0 none;
+    height: 140px;
+    border: 0;
     margin-bottom: 20px;
-    padding: 15px;
     background-color: #e2e2e2;
-     position: relative;
-}
-
-.contents .base-form .search-top,
-.contents .base-form .search-bottom {
-    width: calc(100% - 20px);
     position: relative;
-}
-.contents .base-form .search-top {
-    z-index: 50; 
-}
-.contents .base-form .search-bottom { display: flex; gap: 4px;
-    margin-top: 5px;
+    padding: 10px;
 }
 
-.search-bottom .blind-input { 
-    width: calc(80% - 4px);
-    position: absolute; left: calc(20% + 4px); top: 0;
+.contents .base-form fieldset {
     display: flex;
-    gap: 4px;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
 }
-.filter-library { width: 100%;}
-.filter-tit {width: 20%}
 
-.contents .base-form .filter-library,
-.contents .base-form .filter-tit {
-    position: absolute; 
+/* 공통 */
+.contents .base-form fieldset ul {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+/* ---------------- top ---------------- */
+
+.contents .base-form .search-top {
+    height: 50px;
+    position: relative;
+    z-index: 20;
+}
+
+.contents .base-form .search-top .filter-library {
+    position: absolute;
     top: 0;
     left: 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    flex-shrink: 0;
-    border-bottom: 0 none;
-}
-.base-form .filter-library.open,
-.base-form .filter-tit.open {
-    z-index: 100;
-}
-.search .search-bottom {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.contents .base-form li {
-    display: none;
     width: 100%;
-    padding: 10px 15px;
-    border-top: 0 none;
-    cursor: pointer;
-}
-.contents .base-form li.show {
-    display: block;
-    border-bottom: 1px solid #ccc;
+    background: #fff;
 }
 
-.contents .base-form input {
-    background-color: #fff;
+/* ---------------- bottom ---------------- */
+
+.contents .base-form .search-bottom {
+    height: 50px;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    z-index: 10;
 }
 
-.contents .base-form button {
-    width: 50%;
+.contents .base-form .search-bottom .filter-tit {
+    width: 100px;
+    position: relative;
+}
+
+.contents .base-form .search-bottom .blind-input {
+    flex: 1;
+    display: flex;
+}
+
+.contents .base-form .search-bottom .blind-input .search-txt {
+    width: 100%;
+    background: #fff;
+}
+
+/* ---------------- button ---------------- */
+
+.search-btn {
     border: 1px solid #444;
     background-color: #444;
     color: #fff;
     font-weight: 500;
     border-radius: 4px;
-    padding: 10px 0;
-    box-sizing: border-box
+    padding: 10px 16px;
+    font-size: inherit;
 }
+
+/* ---------------- dropdown ---------------- */
+
+.filter-library li,
+.filter-tit li {
+    display: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #fff;
+}
+
+/* 현재 선택값 */
+
+.filter-library li.show,
+.filter-tit li.show {
+    display: block;
+}
+
+/* dropdown open */
+
+.filter-library.open,
+.filter-tit.open {
+    overflow-y: auto;
+}
+
+.filter-library.open {
+    height: 200px;
+    z-index: 999;
+}
+
+.filter-tit.open {
+    height: 100px;
+    z-index: 999;
+}
+
 /*리스트*/
 #main .contents .cont-list {
     display: flex;
@@ -87,10 +123,14 @@
     padding:15px 5px;
     border-bottom: 1px  solid #e2e2e2;
 }
-.cont-list .img-box {
+.cont-list .curation-card .img-box {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: #eee; /*임시*/
+}
+.cont-list .curation-card .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cont-list .curation-card dl dt {
@@ -126,7 +166,13 @@
     text-align: center;
     line-height: 24px;
 }
+#main .contents .paging a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .paging-btn {
+    background-color: transparent /*추후 수정*/;
     color: transparent;
 }
 
@@ -149,12 +195,12 @@
     }
 
     .contents .base-form {
+        height: 100px;
         padding: 20px;
     }
-    fieldset {
-        display: flex;
+    .contents .base-form fieldset{
+        flex-direction: row;
         justify-content: center;
-        gap: 4px;
         align-items: center;
         margin: 0 auto;
     }
@@ -163,7 +209,7 @@
     }
     #main .contents .base-form .search-bottom {
         width: calc(70% - 8px);
-        margin: 0;
+        margin-top: 0;
     }
     .contents .base-form button {
         font-size: 20px;

@@ -12,6 +12,9 @@ const searchClose = searchArea.querySelector("button");
 const gnb = document.querySelector("#gnb");
 const closeBtn = gnb.querySelector(".close-btn");
 const gnbTabs = gnb.querySelectorAll(".gnb-tab");
+//페이징
+const pagingArea = document.querySelector(".paging");
+const pageNums = pagingArea.querySelectorAll(".page-num");
 
 /* 선택자 - 사이드 */
 const aside = document.querySelector("#aside");
@@ -167,3 +170,14 @@ function onDd(targetDd) {
     sideTab.querySelectorAll("dd").forEach(dd => dd.classList.remove("on"));
     targetDd.classList.add("on");
 }
+
+
+// 5. paging 中 page-num 클릭시, on 나머지 on 없애기
+pageNums.forEach(function(num){
+    num.addEventListener("click", ()=>{
+        pageNums.forEach((n)=>{
+            n.classList.remove("on");
+        });
+        num.classList.add("on");
+    });
+});

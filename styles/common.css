@@ -514,17 +514,23 @@ input {
     border-bottom: 1px solid #ababab;
 }
 
+.paging {
+    display: flex;
+    justify-content: center
+}
 .paging a {
-    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 2px;
+}
+.paging a img {
     width: 24px;
     height: 24px;
-    font-size: 14px;
 }
-.paging a.active {
+.paging a.on {
     background-color: #333;
-}
-.paging-btn {
-    background-color: #eee;
+    color: #fff;
 }
 
 .wrapper { 

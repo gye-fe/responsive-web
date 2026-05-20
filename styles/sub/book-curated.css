@@ -1,115 +1,111 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
-.contents .base-form {
-    height: 140px;
-    border: 0;
-    margin-bottom: 20px;
-    background-color: #e2e2e2;
-    position: relative;
-    padding: 10px;
-}
-
-.contents .base-form fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: 100%;
-}
-
 /* 공통 */
-.contents .base-form fieldset ul {
-    background: #fff;
-    border: 1px solid #ccc;
+
+.base-form {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9fb;
+    border: 0;
+    height: 120px;
 }
 
-/* ---------------- top ---------------- */
+/* ---------------- 도서관 선택 ---------------- */
 
-.contents .base-form .search-top {
-    height: 50px;
+.base-form .library-ch {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 8px;
     position: relative;
     z-index: 20;
 }
 
-.contents .base-form .search-top .filter-library {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
+/* 드롭다운 열림 */
+
+.base-form .library-ch.show {
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-/* ---------------- bottom ---------------- */
+/* ---------------- 검색 영역 ---------------- */
 
-.contents .base-form .search-bottom {
-    height: 50px;
+.base-form .search {
     display: flex;
-    gap: 8px;
+    gap: 6px;
+    align-items: stretch;
     position: relative;
     z-index: 10;
 }
 
-.contents .base-form .search-bottom .filter-tit {
-    width: 100px;
-    position: relative;
+/* 왼쪽 셀렉트 */
+
+.base-form .search ul {
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.contents .base-form .search-bottom .blind-input {
+/* input + button */
+
+.base-form .search div {
     flex: 1;
     display: flex;
+    gap: 6px;
 }
 
-.contents .base-form .search-bottom .blind-input .search-txt {
-    width: 100%;
-    background: #fff;
-}
+/* ---------------- li ---------------- */
 
-/* ---------------- button ---------------- */
-
-.search-btn {
-    border: 1px solid #444;
-    background-color: #444;
-    color: #fff;
-    font-weight: 500;
-    border-radius: 4px;
-    padding: 10px 16px;
-    font-size: inherit;
-}
-
-/* ---------------- dropdown ---------------- */
-
-.filter-library li,
-.filter-tit li {
+.base-form ul li {
+    min-height: 50px;
     display: none;
     padding: 10px 15px;
-    cursor: pointer;
+    box-sizing: border-box;
     background: #fff;
+    cursor: pointer;
 }
 
 /* 현재 선택값 */
 
-.filter-library li.show,
-.filter-tit li.show {
-    display: block;
+.base-form ul li.active {
+    display: flex;
+    align-items: center;
 }
 
-/* dropdown open */
+/* dropdown 열리면 전체 표시 */
 
-.filter-library.open,
-.filter-tit.open {
-    overflow-y: auto;
+.base-form ul.show li {
+    display: flex;
+    align-items: center;
 }
 
-.filter-library.open {
-    height: 200px;
-    z-index: 999;
+/* ---------------- input ---------------- */
+
+.base-form input {
+    flex: 1;
+    height: 50px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-sizing: border-box;
 }
 
-.filter-tit.open {
-    height: 100px;
-    z-index: 999;
+/* ---------------- button ---------------- */
+
+.base-form button {
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #444;
+    background: #444;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    flex-shrink: 0;
 }
+
 
 /*리스트*/
 #main .contents .cont-list {
@@ -123,14 +119,10 @@
     padding:15px 5px;
     border-bottom: 1px  solid #e2e2e2;
 }
-.cont-list .curation-card .img-box {
+.cont-list .img-box {
     width: 100%;
     aspect-ratio: 1 / 1;
-}
-.cont-list .curation-card .img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-color: #eee; /*임시*/
 }
 
 .cont-list .curation-card dl dt {
@@ -154,65 +146,146 @@
 }
 
 
-/*paging 구간*/
-#main .contents .paging {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 25px;
-    gap:1px;
-}
-#main .contents .paging a {
-    text-align: center;
-    line-height: 24px;
-}
-#main .contents .paging a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.paging-btn {
-    background-color: transparent /*추후 수정*/;
-    color: transparent;
-}
+
 
 
 /*반응형 구간*/
-@media screen and (max-width: 767px){/*모바일 최대*/
+/* ---------------- mobile ---------------- */
 
+@media screen and (max-width: 767px){
+
+    .base-form {
+        padding: 10px;
+    }
+
+    .base-form fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* 도서관 선택 */
+
+    .base-form .library-ch {
+        width: 100%;
+    }
+
+    /* 검색 영역 */
+
+    .base-form .search {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+    }
+
+    /* 왼쪽 select */
+
+    .base-form .search ul {
+        width: 90px;
+        flex-shrink: 0;
+    }
+
+    /* 오른쪽 input + button */
+
+    .base-form .search div {
+        flex: 1;
+        display: flex;
+        gap: 6px;
+    }
+
+    .base-form button {
+        padding: 0 14px;
+        white-space: nowrap;
+    }
+
+    form ul li.active {
+        display: flex;
+        align-items: center;
+    }
 }
-@media screen and (min-width:768px){ /*태블릿 최소*/
-    .contents .base-form {
-        padding: 15px 20px;
+
+/* ---------------- tablet ---------------- */
+
+@media screen and (min-width:768px){
+    .base-form{
+        height: 68px;
     }
     .cont-list .curation-card {
-        width: calc(100% / 3)
+        width: calc(100% / 3);
+    }
+
+    .base-form fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .base-form .search {
+        display: flex;
+        gap: 8px;
+    }
+
+    .base-form .search ul {
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .base-form .search div {
+        flex: 1;
+        display: flex;
+        gap: 8px;
     }
 }
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    #main {
-    width: 80%;
-    }
 
-    .contents .base-form {
-        height: 100px;
-        padding: 20px;
-    }
-    .contents .base-form fieldset{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+/* ---------------- desktop ---------------- */
+
+@media screen and (min-width:1024px){
+
+    #main {
+        width: 920px;
         margin: 0 auto;
     }
-    .contents .base-form .search-top {
-        width: 30%;
-    }
-    #main .contents .base-form .search-bottom {
-        width: calc(70% - 8px);
-        margin-top: 0;
-    }
-    .contents .base-form button {
-        font-size: 20px;
+
+    .base-form {
+        min-height: 100px;
     }
 
+    .base-form fieldset {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* 왼쪽 도서관 */
+
+    .base-form .library-ch {
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    /* 오른쪽 검색 */
+
+    .base-form .search {
+        width: 70%;
+        display: flex;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .base-form .search ul {
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .base-form .search div {
+        flex: 1;
+        display: flex;
+        gap: 8px;
+    }
+
+    .base-form .search button {
+        font-size: 16px;
+        padding: 0 20px;
+    }
 }

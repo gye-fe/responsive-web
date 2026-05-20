@@ -90,16 +90,32 @@ tbody tr:last-child th, tbody tr:last-child td{
     border-bottom: 1px solid #e2e2e2;
     border-right: 1px solid #e2e2e2;
     background-color: #fff;
+    padding: 5px 0 0 5px;
+}
+.calendar td::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-left: 4px;
+    background: url("#") no-repeat center / contain;
 }
 .calendar td:last-child {
     border-right: 0 none;
 }
 
 .calendar span {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 2px;
-    padding:1px  4px;
-    border-radius: 50px;
+    border-radius: 50%;
+    background: #333;
     color: #fff;
+    font-size: 11px;
+    line-height: 1;
 }
 .contents .icon-holiday {
     background-color: #76C7FF;
@@ -113,7 +129,10 @@ tbody tr:last-child th, tbody tr:last-child td{
 .contents .icon-today {
     background-color: #444;
 }
-
+.calendar td span.icon-today {
+    width: auto;
+    border-radius: 20%;
+}
 .calendar .sun {
     color: #b33636;
 }

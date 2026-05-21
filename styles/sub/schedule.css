@@ -128,20 +128,31 @@ tbody tr:last-child th, tbody tr:last-child td{
     height: 24px;
     background-repeat: no-repeat;
     background-size: contain;
+    background: url("../../images/schedule-icons.png");
 }
 .contents .icon-holiday::after {
-    background-position: 0, 0;
-    background: url("images/schedule-icons.png")
+    position: absolute;
+    top: 5px;
+    left:15px;
+}
+.contents .icon-event::after {
+    position: absolute;
+    top: 5px;
+    left:15px;
+    background-position: -24px 0;
 }
 
-.contents .icon-event {
-    background-color: #ff6300;
+.contents .icon-makerspace::after {
+    position: absolute;
+    top: 5px;
+    left:15px;
+    background-position: -48px 0;
 }
-.contents .icon-makerspace {
-    background-color: #ffb400;
-}
-.contents .icon-today {
-    background-color: #444;
+.contents .icon-today::after {
+    position: absolute;
+    top: 5px;
+    left:15px;
+    background-position: -72px 0;
 }
 .calendar td span.icon-today {
     width: auto;
@@ -221,5 +232,28 @@ tbody tr:last-child th, tbody tr:last-child td{
     .calendar td {
         height: 160px;
     }
+    .contents .icon-holiday::after {
+    position: absolute;
+    top: 7px;
+    left:25px;
+}
+.contents .icon-event::after {
+    position: absolute;
+    top: 5px;
+    left:20px;
+    background-position: -24px 0;
+}
 
+.contents .icon-makerspace::after {
+    position: absolute;
+    top: 5px;
+    left:20px;
+    background-position: -48px 0;
+}
+.contents .icon-today::after {
+    position: absolute;
+    top: 5px;
+    left:20px;
+    background-position: -72px 0;
+}
 }

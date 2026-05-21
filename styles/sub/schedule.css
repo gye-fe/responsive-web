@@ -51,9 +51,19 @@
 }
 .detail-box .schedule-info li span {
     margin-right: 4px;
-    padding: 2px 5px;
+    padding-left: 24px;
     border-radius: 50%;
     color: #fff;
+    position: relative;
+}
+.detail-box .schedule-info li::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../images/schedule-icons.png);
+    background-position: 0 0;
 }
 /*contents 구간*/
 table { border-top: 2px solid #222;}
@@ -91,20 +101,14 @@ tbody tr:last-child th, tbody tr:last-child td{
     border-right: 1px solid #e2e2e2;
     background-color: #fff;
     padding: 5px 0 0 5px;
+    position: relative; /*가상요소 용도*/
 }
-.calendar td::after {
-    content: "";
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    margin-left: 4px;
-    background: url("#") no-repeat center / contain;
-}
+.calendar td
 .calendar td:last-child {
     border-right: 0 none;
 }
 
-.calendar span {
+/* .calendar span {
     width: 18px;
     height: 18px;
     display: inline-flex;
@@ -116,10 +120,20 @@ tbody tr:last-child th, tbody tr:last-child td{
     color: #fff;
     font-size: 11px;
     line-height: 1;
+    position: relative;
+} */
+.calendar td::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-.contents .icon-holiday {
-    background-color: #76C7FF;
+.contents .icon-holiday::after {
+    background-position: 0, 0;
+    background: url("images/schedule-icons.png")
 }
+
 .contents .icon-event {
     background-color: #ff6300;
 }

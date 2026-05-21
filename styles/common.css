@@ -25,7 +25,7 @@ input:focus, button:focus {
     outline: none;
 }
 
-
+section { background-color: #fff;}
 /* reset */
 table { 
     border-collapse: collapse;
@@ -531,11 +531,6 @@ input {
 .paging a.on {
     background-color: #333;
     color: #fff;
-}
-
-.wrapper { 
-    width: 100%;
-    min-width: 320px;
 }
 
 

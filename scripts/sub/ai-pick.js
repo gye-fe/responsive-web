@@ -333,6 +333,7 @@ const data = [
 //전역변수구간
 const contentsArea = document.querySelector(".user-select-wrapper");//본문
 const processInfo = document.querySelectorAll("#main .process-info li span");
+const processLi = document.querySelectorAll("#main .process-info li");
 const stepTit = contentsArea.querySelector(".tit");
 const stepInfo = contentsArea.querySelector(".dupli-info")
 const stepArea = contentsArea.querySelector(".step-area")
@@ -423,10 +424,14 @@ function btnControl(){
 }
 //스탭 움직이는 함수
 function updatestepInfo(){
-  processInfo.forEach(function(li){
-    li.classList.remove("on");
+  processInfo.forEach(function(sp){
+    sp.classList.remove("on");
   });
   processInfo[stepNum - 1].classList.add("on");
+    processLi.forEach((li)=>{
+      li.classList.remove("active")
+    })
+    processLi[stepNum - 1].classList.add("active");
 }
 //출력 함수를 제어하는 함수
 function stepRender(){
@@ -488,6 +493,7 @@ nextBtn.addEventListener("click",()=>{
   stepRender();
   btnControl();
   updatestepInfo();
+  nextBtn.classList.remove("on");
   console.log(stepNum + "단계")//확인용
 });
 
@@ -497,6 +503,7 @@ prevBtn.addEventListener("click",()=>{
   stepRender();
   btnControl();
   updatestepInfo();
+  nextBtn.classList.remove("on");
 })
 //리셋버튼
 resetBtn.addEventListener("click",()=>{

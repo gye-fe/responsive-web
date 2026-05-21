@@ -32,6 +32,7 @@ select {
     flex: 1;
     margin-bottom: 5px;
     border-radius: 3px;
+    font-size: inherit;
 }
 /*form-area 개인 부분*/
 

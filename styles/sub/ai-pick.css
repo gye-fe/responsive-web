@@ -34,15 +34,32 @@ br {display: none;}
     width: 100%;
     text-align: center;
     padding: 0 5px;
+    position: relative;
 }
-#main .contents .process-info li span {position: relative;}
-
+#main .contents .process-info li span {
+    position: relative;
+}
 #main .contents .process-info li .on::after {
     content: "";
     position: absolute; left:0; bottom: -10px;
     height: 5px;
     width: 100%;
     background-color: #1b6eab;
+}
+#main .contents .process-info li::before {
+    content: "";
+    position: absolute; right:-10px; top:12px;
+    height: 20px;
+    width: 20px;
+    background-image: url(../../images/step-off.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#main .contents .process-info li.active::before {
+    background-image: url(../../images/step-on.png);
+}
+#main .contents .process-info li:last-child::before{
+    display: none;
 }
 #main .contents .process-info .non-break {
     display: flex;
@@ -112,6 +129,7 @@ br {display: none;}
 .user-pick-area {
     padding: 40px;
     display: flex;
+    justify-content: center;
     gap: 8px;
     margin-bottom: 24px;
 }
@@ -119,15 +137,22 @@ br {display: none;}
 .ai-pick-list {
     border-top: 2px solid #222;
     border-bottom: 1px solid #222;
-    padding: 50px;
+    padding: 25px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px
-} 
+}
 
-.user-select-wrapper .card-item{
+.user-select-wrapper .user-pick-area .card-item {
+    width: 20%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #222;
+    cursor: pointer;
+}
+.user-select-wrapper .ai-pick-list .card-item {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     border: 1px solid #222;
     cursor: pointer;
@@ -141,13 +166,17 @@ br {display: none;}
 
 .user-pick-area .img-box,
 .ai-pick-final .img-box {
-    aspect-ratio: 1 / 1.5;
+    width: 100%;
     background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 
+}
+.user-pick-area .img-box img,
+.ai-pick-final .img-box img {
+    width: 100%;
+    height: 100%;
 }
 
 .user-books .info-box,
@@ -163,7 +192,6 @@ br {display: none;}
 }
 
 .user-select-wrapper .card-item:hover .info-box {
-    /* opacity: 1; */
     transform: translateY(0);
 }
 
@@ -173,6 +201,7 @@ br {display: none;}
     font-size: 18px;
 }
 .ai-pick-list .card-item .img-box { position: relative;}
+
 /*결과단계*/
 .ai-pick-final .ai-pick-list .book-desc {
     font-size: 14px;
@@ -190,8 +219,9 @@ br {display: none;}
 }
 #main .user-select-wrapper .select-process-btns button {
     padding: 10px 15px;
-    background-color: #727272;
-    border: 1px solid #727272;
+    background-color: #5F99C4;
+    border: 1px solid #5F99C4;
+    color: #fff;
     font-size: 1rem;
 }
 #main .user-select-wrapper .select-process-btns button.on {
@@ -203,6 +233,7 @@ br {display: none;}
     display: none; /*js로 관리*/
     background-color: #fff;
     border: 1px solid #727272;
+    color: #333;
     margin-right: 8px; 
 }
 #main .user-select-wrapper .select-process-btns .reset {
@@ -225,37 +256,46 @@ br {display: none;}
         display: block;
     }
 }
-@media screen and (min-width:768px){ /*태블릿 최소*/
+@media screen and (min-width:768px) { /*태블릿 최소*/
     .ai-pick-list {
         grid-template-columns: repeat(3, 1fr);
     }
     .btns-area button {
         font-size: 16px;
     }
-}
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    #main {
-        width: 80%;
+    #main .contents .process-info li::before {
+        position: absolute; right:10px; top:3px;
+        height:22px;
+        width: 22px;
     }
-
-    #main .contents .detail-box { padding: 25px;}
+}
+@media screen and (min-width:1024px){ /* 데스크탑 min-width가 다를 수 있음 */
+    #main {
+        width: 920px;
+    }
+    #main .contents .process-info li::before {
+        position: absolute; right:10px; top:2px;
+        height:24px;
+        width: 24px;
+    };
+    #main .contents .detail-box { padding: 25px;};
     #main .contents .user-select-wrapper .btns-area {
         grid-template-columns: repeat(5, 1fr);
     };
     .btns-area button {
         font-size: 18px;
     };
-    .ai-pick-list {
-        grid-template-columns: repeat(5, 1fr);
+    #main .contents .user-select-wrapper .ai-pick-list {
+        grid-template-columns: repeat(4, 1fr);
     };
     .user-select-wrapper {
         position: relative;
         padding-top: 80px;
-    }
+    };
     .select-process-btns {
         position: absolute;
         top: 0;
         right: 0;
         margin-top: 0;
-    }
+    };
 }

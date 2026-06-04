@@ -31,9 +31,9 @@ const data = [
   ],
 
   types: [
-    { name: "그림책", image: "./images/ai-pick/cate_picturebook.png" },
-    { name: "유아학습", image: "./images/ai-pick/cate_kidsstudy.png" },
-    { name: "놀이학습", image: "./images/ai-pick/cate_playlearn.png" }
+    { name: "그림책", image: "./images/ai-pick/type_picturebook.png" },
+    { name: "유아학습", image: "./images/ai-pick/type_kidsstudy.png" },
+    { name: "놀이학습", image: "./images/ai-pick/type_playlearn.png" }
   ],
     image : "./images/ai-pick/ico_age_1.png"
   },
